@@ -1,0 +1,453 @@
+{
+  "resep_kuliner_banjarmasin": [
+    {
+      "nama": "Soto Banjar Asli",
+      "jenis": "makanan",
+      "deskripsi_singkat": "Soto khas Banjarmasin dengan kuah rempah kental dan daging ayam kampung.",
+      "penjelasan1": "Soto Banjar adalah hidangan berkuah kaya rempah dengan daging ayam, perkedel, dan ketupat. Kuahnya yang gurih dan aromatik berasal dari campuran kayu manis, cengkeh, daun salam, serta rempah-rempah lainnya yang dihaluskan.",
+      "penjelasan2": "Hidangan ini biasanya disajikan dengan pelengkap seperti telur rebus, kentang goreng, dan taburan bawang goreng yang menambah cita rasa. Soto Banjar memiliki tekstur kuah yang kental namun tidak terlalu berminyak, membuatnya nyaman di lidah.",
+      "penjelasan3": "Keunikan soto ini terletak pada penggunaan ayam kampung yang memberikan kaldu lebih gurih dan daging yang lebih padat. Cocok dinikmati saat sarapan atau makan siang dengan nasi atau ketupat.",
+      "gambar": "img/gambar1.jpg",
+      "bahan": [
+        "1 ekor ayam kampung, potong",
+        "2 liter air",
+        "4 butir telur ayam, rebus",
+        "3 buah kentang, goreng",
+        "4 siung bawang merah",
+        "1 buah ketumbar",
+        "1/2 biji pala",
+        "3 cm jahe",
+        "3 batang serai, memarkan",
+        "4 lembar daun jeruk",
+        "3 lembar daun salam",
+        "3 cm kayu manis",
+        "Garam dan gula secukupnya"
+      ],
+      "langkah_pembuatan": [
+        {
+          "langkah": 1,
+          "deskripsi": "Rebus ayam dengan air, daun jeruk, daun salam, dan kayu manis hingga empuk."
+        },
+        {
+          "langkah": 2,
+          "deskripsi": "Angkat ayam, suwir-suwir. Saring kaldu."
+        },
+        {
+          "langkah": 3,
+          "deskripsi": "Tumis bumbu halus hingga harum, masukkan ke kaldu. Tambahkan ayam, garam, dan gula."
+        },
+        {
+          "langkah": 4,
+          "deskripsi": "Sajikan dengan ketupat, telur rebus, perkedel, dan taburan bawang goreng."
+        }
+      ],
+      "fakta_gizi": {
+        "kalori": "453 kcal",
+        "protein": "25 g",
+        "karbohidrat": "40 g",
+        "lemak": "15 g"
+      },
+      "tips_dan_trik": [
+        "Gunakan ayam kampung untuk rasa yang lebih gurih.",
+        "Rebus ayam dengan api kecil agar kaldu lebih bening.",
+        "Tambahkan perkedel kentang untuk tekstur yang beragam."
+      ],
+      "link_video": "https://youtu.be/wyGBCbmvGYw?si=96fWSaJ2tf5roi1H",
+      "tingkat_sulit": "sedang",
+      "waktu_pengerjaan": "90 menit",
+      "reting": [
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star"
+      ],
+      "reting_deskripsi": "5/5",
+      "src": "card1.html"
+    },
+    {
+      "nama": "Ketupat Kandangan",
+      "jenis": "makanan",
+      "deskripsi_singkat": "Ketupat khas Kandangan dengan isian daging dan kuah kental.",
+      "penjelasan1": "Ketupat Kandangan adalah hidangan tradisional yang disajikan dengan kuah kental berempah dan daging sapi. Kuahnya terbuat dari campuran bumbu halus seperti bawang merah, bawang putih, dan ketumbar yang ditumis hingga harum.",
+      "penjelasan2": "Daging sapi yang digunakan biasanya direbus hingga empuk, kemudian dipotong kecil-kecil dan dimasukkan kembali ke dalam kuah. Ketupatnya sendiri dimasak dengan daun pandan agar memiliki aroma yang wangi.",
+      "penjelasan3": "Hidangan ini sering disajikan saat hari raya atau acara adat sebagai simbol kebersamaan. Rasa gurih dari kuah dan empuknya daging sapi membuat Ketupat Kandangan sangat digemari.",
+      "gambar": "img/gambar2.jpg",
+      "bahan": [
+        "9 buah ketupat",
+        "500 gram daging sapi",
+        "Bumbu halus: bawang merah, bawang putih, ketumbar",
+        "Daun salam, serai, kayu manis",
+        "Garam dan gula secukupnya"
+      ],
+      "langkah_pembuatan": [
+        {
+          "langkah": 1,
+          "deskripsi": "Rebus daging sapi hingga empuk, potong kecil."
+        },
+        {
+          "langkah": 2,
+          "deskripsi": "Tumis bumbu halus, masukkan ke kuah rebusan daging."
+        },
+        {
+          "langkah": 3,
+          "deskripsi": "Sajikan ketupat dengan kuah dan daging."
+        }
+      ],
+      "fakta_gizi": {
+        "kalori": "500 kcal",
+        "protein": "30g",
+        "karbohidrat": "60g",
+        "lemak": "20g"
+      },
+      "tips_dan_trik": [
+        "Gunakan daging has dalam untuk hasil lebih empuk.",
+        "Rebus ketupat dengan daun pandan agar wangi."
+      ],
+      "link_video": "https://youtu.be/a9C8jgAtsH8?si=T3MF8QEd2NIY616o",
+      "tingkat_sulit": "sedang",
+      "waktu_pengerjaan": "120 menit",
+      "reting": [
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star"
+      ],
+      "reting_deskripsi": "5/5",
+      "src": "card2.html"
+    },
+    {
+      "nama": "Nasi Kuning Banjar",
+      "jenis": "makanan",
+      "deskripsi_singkat": "Nasi kuning dengan aroma rempah khas Banjar.",
+      "penjelasan1": "Nasi Kuning Banjar dimasak dengan santan dan kunyit, memberikan warna kuning alami serta aroma yang menggugah selera. Rempah seperti serai dan daun salam ditambahkan untuk meningkatkan cita rasanya.",
+      "penjelasan2": "Hidangan ini biasanya disajikan dengan ayam goreng, telur balado, sambal, dan pelengkap lainnya seperti kering kentang. Tekstur nasinya lembut dan sedikit berminyak karena penggunaan santan.",
+      "penjelasan3": "Nasi Kuning Banjar sering menjadi hidangan wajib dalam acara syukuran atau perayaan adat. Rasanya yang gurih dan aromatik membuatnya cocok dinikmati dalam berbagai suasana.",
+      "gambar": "img/gambar3.jpg",
+      "bahan": [
+        "500 gram beras",
+        "400 ml santan",
+        "2 cm kunyit",
+        "Serai, daun salam, garam"
+      ],
+      "langkah_pembuatan": [
+        {
+          "langkah": 1,
+          "deskripsi": "Cuci beras, campur dengan santan dan bumbu."
+        },
+        {
+          "langkah": 2,
+          "deskripsi": "Masak hingga matang."
+        }
+      ],
+      "fakta_gizi": {
+        "kalori": "300 kcal",
+        "protein": "5g",
+        "karbohidrat": "50g",
+        "lemak": "10g"
+      },
+      "tips_dan_trik": ["Gunakan santan kental untuk rasa lebih gurih."],
+      "link_video": "https://youtu.be/nCuh6n78DQU?si=B6wDJ-7jANiT8yTV",
+      "tingkat_sulit": "mudah",
+      "waktu_pengerjaan": "45 menit",
+      "reting": [
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star"
+      ],
+      "reting_deskripsi": "5/5",
+      "src": "card3.html"
+    },
+    {
+      "nama": "Kue Bingka",
+      "jenis": "kue",
+      "deskripsi_singkat": "Kue tradisional berbahan dasar tepung beras dan santan.",
+      "penjelasan1": "Kue Bingka adalah kue tradisional khas Banjar yang terbuat dari tepung beras, santan, dan gula. Teksturnya lembut dan kenyal dengan rasa manis yang khas.",
+      "penjelasan2": "Kue ini biasanya dipanggang dalam loyang cetakan hingga permukaannya kecokelatan. Aroma harum dari santan dan pandan membuatnya sangat menggoda.",
+      "penjelasan3": "Kue Bingka sering disajikan saat acara adat atau sebagai hidangan penutup. Cocok dinikmati dengan teh hangat atau kopi.",
+      "gambar": "img/gambar4.jpg",
+      "bahan": [
+        "300 gram tepung beras",
+        "200 gram gula",
+        "400 ml santan",
+        "2 butir telur"
+      ],
+      "langkah_pembuatan": [
+        {
+          "langkah": 1,
+          "deskripsi": "Campur semua bahan, aduk rata."
+        },
+        {
+          "langkah": 2,
+          "deskripsi": "Tuang ke loyang, panggang hingga matang."
+        }
+      ],
+      "fakta_gizi": {
+        "kalori": "200 kcal",
+        "protein": "3g",
+        "karbohidrat": "30g",
+        "lemak": "8g"
+      },
+      "tips_dan_trik": ["Panggang dengan api sedang agar tidak gosong."],
+      "link_video": "https://youtu.be/546BK6XtJuM?si=PNFAfF5rh4AfYloe",
+      "tingkat_sulit": "mudah",
+      "waktu_pengerjaan": "60 menit",
+      "reting": [
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star-half-alt"
+      ],
+      "reting_deskripsi": "4.5/5",
+      "src": "card4.html"
+    },
+    {
+      "nama": "Kue Lumpur Banjar",
+      "jenis": "kue",
+      "deskripsi_singkat": "Kue lembut dengan topping kelapa muda.",
+      "penjelasan1": "Kue Lumpur Banjar adalah kue tradisional yang terbuat dari tepung terigu, telur, dan santan. Teksturnya sangat lembut dan lembap, mirip dengan kue pancake.",
+      "penjelasan2": "Kue ini biasanya diberi topping kelapa muda parut atau kismis untuk menambah cita rasa. Cara memasaknya dengan dikukus sehingga hasilnya lebih sehat.",
+      "penjelasan3": "Kue Lumpur Banjar cocok disajikan sebagai camilan sore atau hidangan penutup. Rasanya yang manis dan gurih membuatnya disukai oleh semua kalangan.",
+      "gambar": "img/gambar5.jpg",
+      "bahan": [
+        "200 gram tepung terigu",
+        "150 gram gula",
+        "2 butir telur",
+        "100 gram kelapa muda"
+      ],
+      "langkah_pembuatan": [
+        {
+          "langkah": 1,
+          "deskripsi": "Kocok telur dan gula hingga mengembang."
+        },
+        {
+          "langkah": 2,
+          "deskripsi": "Tambahkan tepung dan kelapa, aduk rata."
+        },
+        {
+          "langkah": 3,
+          "deskripsi": "Kukus hingga matang."
+        }
+      ],
+      "fakta_gizi": {
+        "kalori": "180 kcal",
+        "protein": "4g",
+        "karbohidrat": "25g",
+        "lemak": "7g"
+      },
+      "tips_dan_trik": ["Kukus dengan api sedang agar tidak pecah."],
+      "link_video": "https://youtu.be/EAKXhS1eltM?si=Uo4bKEop5quMIKeu",
+      "tingkat_sulit": "mudah",
+      "waktu_pengerjaan": "40 menit",
+      "reting": [
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star-half-alt"
+      ],
+      "reting_deskripsi": "4.5/5",
+      "src": "card5.html"
+    },
+    {
+      "nama": "Kue Putu Mayang",
+      "jenis": "kue",
+      "deskripsi_singkat": "Kue tradisional berbentuk mi dengan saus gula merah.",
+      "penjelasan1": "Kue Putu Mayang adalah kue tradisional yang terbuat dari tepung beras dan santan, dibentuk seperti mi atau pita. Teksturnya kenyal dan lembut.",
+      "penjelasan2": "Kue ini disajikan dengan saus gula merah kental yang manis dan kadang ditambahkan santan untuk rasa gurih. Biasanya dikukus dalam cetakan khusus agar bentuknya rapi.",
+      "penjelasan3": "Putu Mayang cocok dinikmati sebagai camilan atau hidangan penutup. Rasanya yang manis dan teksturnya yang unik membuatnya populer di kalangan masyarakat Banjar.",
+      "gambar": "img/gambar6.jpg",
+      "bahan": [
+        "300 gram tepung beras",
+        "100 gram gula merah",
+        "200 ml santan",
+        "Daun pandan"
+      ],
+      "langkah_pembuatan": [
+        {
+          "langkah": 1,
+          "deskripsi": "Campur tepung beras dengan santan, bentuk seperti mi."
+        },
+        {
+          "langkah": 2,
+          "deskripsi": "Kukus hingga matang."
+        },
+        {
+          "langkah": 3,
+          "deskripsi": "Sajikan dengan saus gula merah."
+        }
+      ],
+      "fakta_gizi": {
+        "kalori": "220 kcal",
+        "protein": "2g",
+        "karbohidrat": "40g",
+        "lemak": "5g"
+      },
+      "tips_dan_trik": ["Gunakan cetakan khusus untuk bentuk yang rapi."],
+      "link_video": "https://youtu.be/a8_QKDmNQZ0?si=g2wPpzSfc_8C-3w6",
+      "tingkat_sulit": "sedang",
+      "waktu_pengerjaan": "50 menit",
+      "reting": [
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star",
+        "far fa-star"
+      ],
+      "reting_deskripsi": "4/5",
+      "src": "card6.html"
+    },
+    {
+      "nama": "Es Pisang Hijau",
+      "jenis": "minuman",
+      "deskripsi_singkat": "Minuman segar dari pisang hijau dan santan.",
+      "penjelasan1": "Es Pisang Hijau adalah minuman tradisional Banjar yang terbuat dari pisang hijau kukus yang dihaluskan, kemudian dicampur dengan santan dan gula.",
+      "penjelasan2": "Minuman ini disajikan dingin dengan es batu, membuatnya sangat menyegarkan. Rasa manis dari pisang dan gurihnya santan menciptakan kombinasi yang unik.",
+      "penjelasan3": "Es Pisang Hijau cocok dinikmati saat cuaca panas atau sebagai hidangan penutup. Teksturnya yang lembut dan rasanya yang khas membuatnya digemari banyak orang.",
+      "gambar": "img/gambar7.jpg",
+      "bahan": [
+        "5 buah pisang hijau",
+        "200 ml santan",
+        "100 gram gula",
+        "Es batu"
+      ],
+      "langkah_pembuatan": [
+        {
+          "langkah": 1,
+          "deskripsi": "Kukus pisang hingga matang, haluskan."
+        },
+        {
+          "langkah": 2,
+          "deskripsi": "Campur dengan santan dan gula."
+        },
+        {
+          "langkah": 3,
+          "deskripsi": "Sajikan dengan es batu."
+        }
+      ],
+      "fakta_gizi": {
+        "kalori": "150 kcal",
+        "protein": "2g",
+        "karbohidrat": "30g",
+        "lemak": "4g"
+      },
+      "tips_dan_trik": [
+        "Gunakan pisang yang benar-benar matang untuk rasa lebih manis."
+      ],
+      "link_video": "https://youtu.be/AmeyfQ47-I4?si=5f1aI3j0a0r_lRKo",
+      "tingkat_sulit": "mudah",
+      "waktu_pengerjaan": "30 menit",
+      "reting": [
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star-half-alt",
+        "far fa-star"
+      ],
+      "reting_deskripsi": "3.5/5",
+      "src": "card7.html"
+    },
+    {
+      "nama": "Es Kacang Merah",
+      "jenis": "minuman",
+      "deskripsi_singkat": "Minuman segar dari kacang merah dan sirup gula.",
+      "penjelasan1": "Es Kacang Merah adalah minuman penyegar khas Banjar yang terbuat dari kacang merah rebus yang dicampur dengan sirup gula merah dan es batu.",
+      "penjelasan2": "Tekstur kacang merah yang lembut dan manisnya sirup gula merah membuat minuman ini sangat nikmat. Biasanya ditambahkan susu kental manis untuk rasa yang lebih kaya.",
+      "penjelasan3": "Es Kacang Merah cocok dinikmati saat siang hari atau setelah makan berat. Kandungan serat dari kacang merah juga membuatnya lebih sehat.",
+      "gambar": "img/gambar8.jpg",
+      "bahan": [
+        "200 gram kacang merah",
+        "100 gram gula merah",
+        "Es batu",
+        "Susu kental manis"
+      ],
+      "langkah_pembuatan": [
+        {
+          "langkah": 1,
+          "deskripsi": "Rebus kacang merah hingga empuk."
+        },
+        {
+          "langkah": 2,
+          "deskripsi": "Campur dengan gula merah yang sudah dicairkan."
+        },
+        {
+          "langkah": 3,
+          "deskripsi": "Sajikan dengan es batu dan susu."
+        }
+      ],
+      "fakta_gizi": {
+        "kalori": "180 kcal",
+        "protein": "5g",
+        "karbohidrat": "35g",
+        "lemak": "2g"
+      },
+      "tips_dan_trik": [
+        "Rendam kacang merah semalaman agar cepat empuk saat direbus."
+      ],
+      "link_video": "https://youtu.be/Bdt39FyuIQE?si=pix-LTmB97l0Wguh",
+      "tingkat_sulit": "mudah",
+      "waktu_pengerjaan": "60 menit",
+      "reting": [
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star-half-alt",
+        "far fa-star"
+      ],
+      "reting_deskripsi": "3.5/5",
+      "src": "card8.html"
+    },
+    {
+      "nama": "Sambal Nanas Banjar",
+      "jenis": "sambal",
+      "deskripsi_singkat": "Sambal pedas manis dengan nanas khas Banjar.",
+      "penjelasan1": "Sambal Nanas Banjar adalah sambal unik yang menggabungkan rasa pedas cabai dengan manis dan asam dari nanas. Bumbu dasarnya terdiri dari cabai merah, bawang merah, dan garam.",
+      "penjelasan2": "Nanas yang digunakan biasanya dipotong kecil-kecil dan dimasak bersama bumbu hingga layu. Hasilnya adalah sambal dengan tekstur sedikit berair dan rasa yang segar.",
+      "penjelasan3": "Sambal ini cocok disajikan sebagai pendamping hidangan ikan bakar, ayam goreng, atau nasi putih. Rasa pedas-manisnya mampu meningkatkan selera makan.",
+      "gambar": "img/gambar9.jpg",
+      "bahan": [
+        "1 buah nanas, potong kecil",
+        "10 buah cabai merah",
+        "5 siung bawang merah",
+        "Garam dan gula secukupnya"
+      ],
+      "langkah_pembuatan": [
+        {
+          "langkah": 1,
+          "deskripsi": "Haluskan cabai dan bawang merah."
+        },
+        {
+          "langkah": 2,
+          "deskripsi": "Tumis bumbu halus, masukkan nanas."
+        },
+        {
+          "langkah": 3,
+          "deskripsi": "Tambahkan garam dan gula, masak hingga matang."
+        }
+      ],
+      "fakta_gizi": {
+        "kalori": "50 kcal",
+        "protein": "1g",
+        "karbohidrat": "10g",
+        "lemak": "0.5g"
+      },
+      "tips_dan_trik": ["Gunakan nanas muda untuk rasa asam yang segar."],
+      "link_video": "https://youtu.be/ezZZgphAFwc?si=j02-0q-KchZlx7Kh",
+      "tingkat_sulit": "mudah",
+      "waktu_pengerjaan": "20 menit",
+      "reting": [
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star",
+        "fas fa-star",
+        "far fa-star"
+      ],
+      "reting_deskripsi": "4.5/5",
+      "src": "card9.html"
+    }
+  ]
+}

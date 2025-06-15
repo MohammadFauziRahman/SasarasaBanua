@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Berbagi Resep | Sasarasa Banua</title>
+    <link rel="stylesheet" href="resep.css" />
+    <link
+      rel="shortcut icon"
+      href="img/logo_SasarasaBanua.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="img/logo_SasarasaBanua.png" alt="Logo Sasarasa Banua" />
+        </div>
+        <div class="logo-text">Sasarasa Banua</div>
+      </div>
+
+      <div class="nav-links">
+        <a href="../home.html">Beranda</a>
+        <a href="../menu_umkm/umkm.html">UMKM</a>
+        <a href="resep.html" class="active">Resep</a>
+        <a href="../menu_event/blog.html">Blog & Event</a>
+        <a href="../menu_quiz/quiz.html">Quiz</a>
+      </div>
+
+      <div class="tonggel">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <!-- Resep Header -->
+    <section class="resep-header">
+      <h1>Resep Masakan Khas Banjarmasin</h1>
+      <p>
+        Temukan resep autentik kuliner Banjar yang lezat dan mudah dibuat di
+        rumah. Jelajahi warisan kuliner Kalimantan Selatan melalui resep-resep
+        turun temurun.
+      </p>
+    </section>
+
+    <!-- Filter dan Pencarian -->
+    <section class="filter-section">
+      <div class="search-container">
+        <input type="text" placeholder="Cari resep..." />
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </div>
+
+      <div class="filter-options">
+        <div class="filter-group">
+          <label for="kategori">Kategori Makanan</label>
+          <select id="kategori">
+            <option value="">Semua Kategori</option>
+            <option value="makanan">Makanan</option>
+            <option value="kue">Kue</option>
+            <option value="minuman">Minuman</option>
+            <option value="sambal">sambal</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="kesulitan">Tingkat Kesulitan</label>
+          <select id="kesulitan">
+            <option value="">Semua Tingkat</option>
+            <option value="mudah">Mudah</option>
+            <option value="sedang">Sedang</option>
+            <option value="sulit">Sulit</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="waktu">Waktu Penyajian</label>
+          <select id="waktu">
+            <option value="">Semua Waktu</option>
+            <option value="cepat">Cepat (<30 menit)</option>
+            <option value="sedang">Sedang (30-60 menit)</option>
+            <option value="lama">Lama (>60 menit)</option>
+          </select>
+        </div>
+
+        <button class="calculator-btn" id="openCalculator">
+          <i class="fas fa-calculator"></i> Kalkulator Masak
+        </button>
+      </div>
+    </section>
+
+    <!-- Kalkulator Modal -->
+    <div class="calculator-modal" id="calculatorModal">
+      <div class="calculator-content">
+        <span class="close-modal">&times;</span>
+        <h2>Kalkulator Masak</h2>
+
+        <div class="calculator-tabs">
+          <button class="tab-btn active" data-tab="unit-converter">
+            Konversi Satuan
+          </button>
+          <button class="tab-btn" data-tab="portion-calculator">
+            Hitung Porsi
+          </button>
+        </div>
+
+        <div class="tab-content active" id="unit-converter">
+          <h3>Konversi Satuan Berat</h3>
+          <div class="converter-form">
+            <input
+              type="number"
+              id="amount"
+              placeholder="Jumlah"
+              min="0"
+              step="0.1"
+            />
+            <select id="from-unit">
+              <option value="gram">Gram (g)</option>
+              <option value="kg">Kilogram (kg)</option>
+              <option value="ons">Ons</option>
+              <option value="lb">Pound (lb)</option>
+              <option value="oz">Ounce (oz)</option>
+            </select>
+            <span>ke</span>
+            <select id="to-unit">
+              <option value="gram">Gram (g)</option>
+              <option value="kg">Kilogram (kg)</option>
+              <option value="ons">Ons</option>
+              <option value="lb">Pound (lb)</option>
+              <option value="oz">Ounce (oz)</option>
+            </select>
+            <button id="convert-btn">Konversi</button>
+          </div>
+          <div class="result" id="conversion-result"></div>
+        </div>
+
+        <div class="tab-content" id="portion-calculator">
+          <h3>Hitung Porsi Masakan</h3>
+          <div class="portion-form">
+            <select id="recipe-select">
+              <option value="">Pilih Resep</option>
+              <!-- Options akan diisi oleh JavaScript -->
+            </select>
+            <input
+              type="number"
+              id="portion-size"
+              placeholder="Jumlah Porsi"
+              min="1"
+              value="1"
+              step="0.5"
+            />
+            <button id="calculate-btn">Hitung</button>
+          </div>
+          <div class="result" id="portion-result"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Result Popup -->
+    <div id="resultPopup" class="popup">
+      <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <div id="popupContent"></div>
+      </div>
+    </div>
+
+    <!-- Alert Popup -->
+    <div id="alertPopup" class="alert-popup">
+      <div class="alert-content">
+        <span id="alertMessage"></span>
+      </div>
+    </div>
+
+    <section class="resep-container">
+      <!-- Tempat Isi Card Js -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="logo">
+            <img src="img/logo_SasarasaBanua.png" alt="Logo Sasarasa Banua" />
+          </div>
+          <div class="footer-logo-text">Sasarasa Banua</div>
+        </div>
+
+        <div class="footer-links">
+          <a href="../home.html">Beranda</a>
+          <a href="../menu_umkm/umkm.html">UMKM</a>
+          <a href="resep.html">Resep</a>
+          <a href="../menu_event/blog.html">Blog & Event</a>
+          <a href="../menu_quiz/quiz.html">Quiz</a>
+        </div>
+
+        <div class="footer-social">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <div class="footer-copyright">
+          &copy; 2025 Sasarasa Banua. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+    <script src="resep.js"></script>
+  </body>
+</html>
