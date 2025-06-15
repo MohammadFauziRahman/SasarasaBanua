@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Living Plaza Culinery | Event Kuliner | Sasarasa Banua</title>
+    <link
+      rel="shortcut icon"
+      href="img/logo_SasarasaBanua.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Variabel Warna */
+      :root {
+        --primary-color: #1e11d1;
+        --secondary-color: #9b8357;
+        --dark-color: #2f3542;
+        --light-color: #f1f2f6;
+        --accent-color: #ff7f50;
+      }
+
+      /* Reset dan Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background-color: #f9f9f9;
+        color: var(--dark-color);
+        line-height: 1.6;
+      }
+
+      /* Navbar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 5%;
+        background-color: white;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo {
+        width: 40px;
+        height: 40px;
+      }
+
+      .logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .logo-text {
+        font-size: 1.5rem;
+        font-weight: 700;
+        background: linear-gradient(
+          to right,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--dark-color);
+        font-weight: 500;
+        position: relative;
+        padding: 0.5rem 0;
+        transition: all 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary-color);
+      }
+
+      .nav-links a.active {
+        color: var(--primary-color);
+      }
+
+      .nav-links a.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(
+          to right,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+      }
+
+      .tonggel {
+        display: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+      }
+
+      /* Event Hero Section */
+      .event-hero {
+        position: relative;
+        height: 60vh;
+        overflow: hidden;
+        margin-bottom: 3rem;
+      }
+
+      .event-hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.7);
+      }
+
+      .event-hero-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 5% 10%;
+        color: white;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+      }
+
+      .event-date-badge {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 0.8rem 1.5rem;
+        border-radius: 8px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .event-day {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        line-height: 1;
+      }
+
+      .event-month {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--dark-color);
+        text-transform: uppercase;
+      }
+
+      .event-title {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .event-location {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      .event-location i {
+        color: var(--accent-color);
+      }
+
+      .event-price-tag {
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 30px;
+        font-weight: 600;
+        display: inline-block;
+      }
+
+      .btn-kembali {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 30px;
+        font-weight: 600;
+        display: inline-block;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .btn-kembali:hover {
+        background-color: #7a7be1;
+      }
+
+      /* Event Detail Container */
+      .event-detail-container {
+        display: flex;
+        gap: 3rem;
+        padding: 0 10% 5rem;
+      }
+
+      .event-main-content {
+        flex: 2;
+      }
+
+      .event-sidebar {
+        flex: 1;
+      }
+
+      /* About Event Section */
+      .about-event {
+        background-color: white;
+        border-radius: 15px;
+        padding: 2.5rem;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        margin-bottom: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(
+          to right,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        border-radius: 3px;
+      }
+
+      .event-description {
+        margin-bottom: 2rem;
+        line-height: 1.8;
+      }
+
+      .event-highlights {
+        margin: 2rem 0;
+      }
+
+      .highlight-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .highlight-icon {
+        background-color: rgba(30, 17, 209, 0.1);
+        color: var(--primary-color);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 1.2rem;
+      }
+
+      .highlight-content h4 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: var(--dark-color);
+      }
+
+      /* Gallery Section */
+      .event-gallery {
+        background-color: white;
+        border-radius: 15px;
+        padding: 2.5rem;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        margin-bottom: 2rem;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .gallery-item {
+        aspect-ratio: 1;
+        overflow: hidden;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.03);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
+
+      /* Event Schedule */
+      .event-schedule {
+        background-color: white;
+        border-radius: 15px;
+        padding: 2.5rem;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        margin-bottom: 2rem;
+      }
+
+      .schedule-item {
+        display: flex;
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .schedule-item:last-child {
+        border-bottom: none;
+      }
+
+      .schedule-time {
+        background-color: rgba(155, 131, 87, 0.1);
+        color: var(--secondary-color);
+        padding: 0.8rem 1rem;
+        border-radius: 8px;
+        font-weight: 600;
+        text-align: center;
+        min-width: 120px;
+      }
+
+      .schedule-content h4 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: var(--dark-color);
+      }
+
+      .schedule-speaker {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin-top: 0.8rem;
+      }
+
+      .speaker-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .speaker-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .speaker-info h5 {
+        font-size: 0.9rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .speaker-info p {
+        font-size: 0.8rem;
+        color: #777;
+      }
+
+      /* Event Sidebar */
+      .event-info-card {
+        background-color: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        margin-bottom: 2rem;
+        position: sticky;
+        top: 100px;
+      }
+
+      .info-item {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .info-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .info-icon {
+        color: var(--primary-color);
+        font-size: 1.2rem;
+        margin-top: 0.2rem;
+      }
+
+      .info-content h4 {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+        color: #555;
+      }
+
+      .info-content p {
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--dark-color);
+      }
+
+      .register-btn {
+        display: inline-block;
+        width: 100%;
+        background-color: var(--primary-color);
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        margin-top: 1rem;
+        transition: all 0.3s ease;
+      }
+
+      .register-btn:hover {
+        background-color: #160db1;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(30, 17, 209, 0.2);
+      }
+
+      .map-container {
+        height: 300px;
+        border-radius: 15px;
+        overflow: hidden;
+        margin-top: 2rem;
+      }
+
+      .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      /* Related Events */
+      .related-events {
+        background-color: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      .related-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .related-event-card {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #eee;
+      }
+
+      .related-event-card:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .related-event-image {
+        width: 100px;
+        height: 80px;
+        border-radius: 8px;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      .related-event-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .related-event-content h4 {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+      }
+
+      .related-event-date {
+        font-size: 0.8rem;
+        color: var(--secondary-color);
+        font-weight: 500;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 3rem 10%;
+        text-align: center;
+      }
+
+      .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .footer-logo .logo {
+        width: 40px;
+        height: 40px;
+      }
+
+      .footer-logo .logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .footer-logo-text {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: white;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .footer-links a {
+        color: #ddd;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: white;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+      }
+
+      .social-icon:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(-3px);
+      }
+
+      .footer-copyright {
+        margin-top: 2rem;
+        color: #aaa;
+        font-size: 0.9rem;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 992px) {
+        .nav-links {
+          position: fixed;
+          top: -100%;
+          left: 0;
+          width: 100%;
+          height: 60%;
+          background-color: white;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 2rem 1rem;
+          gap: 1.5rem;
+          transition: top 0.5s ease-in-out;
+          box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+          z-index: 999;
+        }
+
+        .nav-links.active {
+          top: 72px;
+        }
+
+        .tonggel {
+          display: block;
+        }
+
+        .event-hero {
+          height: 50vh;
+        }
+
+        .event-title {
+          font-size: 2.2rem;
+        }
+
+        .event-detail-container {
+          flex-direction: column;
+          padding: 0 5% 3rem;
+        }
+
+        .event-info-card {
+          position: static;
+        }
+
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .event-hero {
+          height: 45vh;
+        }
+
+        .event-hero-content {
+          padding: 5%;
+        }
+
+        .event-title {
+          font-size: 1.8rem;
+        }
+
+        .about-event,
+        .event-gallery,
+        .event-schedule,
+        .event-info-card,
+        .related-events {
+          padding: 1.5rem;
+        }
+
+        .section-title {
+          font-size: 1.5rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .event-hero {
+          height: 40vh;
+        }
+
+        .event-title {
+          font-size: 1.6rem;
+        }
+
+        .event-date-badge {
+          padding: 0.5rem 1rem;
+        }
+
+        .event-day {
+          font-size: 1.5rem;
+        }
+
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .schedule-item {
+          flex-direction: column;
+          gap: 0.8rem;
+        }
+
+        .schedule-time {
+          width: fit-content;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="img/logo_SasarasaBanua.png" alt="Logo Sasarasa Banua" />
+        </div>
+        <div class="logo-text">Sasarasa Banua</div>
+      </div>
+
+      <div class="nav-links">
+        <a href="../home.html">Beranda</a>
+        <a href="../menu_umkm/umkm.html">UMKM</a>
+        <a href="../menu_resep/resep.html">Resep</a>
+        <a href="blog.html" class="active">Blog & Event</a>
+        <a href="../menu_quiz/quiz.html">Quiz</a>
+      </div>
+
+      <div class="tonggel">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- Event Hero Section -->
+      <section class="event-hero">
+        <img id="hero-image" src="" alt="" class="event-hero-image" />
+        <div class="event-hero-content">
+          <div class="event-date-badge">
+            <div id="event-day" class="event-day"></div>
+            <div id="event-month" class="event-month"></div>
+          </div>
+          <h1 id="event-title" class="event-title"></h1>
+          <div class="event-location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span id="event-location-name"></span>
+          </div>
+          <div id="event-price" class="event-price-tag"></div>
+          <a href="blog.html" class="btn-kembali">Kembali</a>
+        </div>
+      </section>
+
+      <!-- Event Detail Container -->
+      <div class="event-detail-container">
+        <div class="event-main-content">
+          <section class="about-event">
+            <h2 class="section-title">Tentang Event</h2>
+            <p id="event-description" class="event-description"></p>
+
+            <div id="event-highlights" class="event-highlights"></div>
+
+            <h3 class="section-title">Apa yang Akan Anda Temui?</h3>
+            <p class="event-description">
+              Acara ini menawarkan berbagai pengalaman menarik yang bisa Anda
+              nikmati:
+            </p>
+            <div id="event-features"></div>
+          </section>
+
+          <!-- Gallery Section -->
+          <section class="event-gallery">
+            <h2 class="section-title">Galeri Event</h2>
+            <p>
+              Lihat keseruan event serupa sebelumnya melalui galeri foto
+              berikut:
+            </p>
+
+            <div id="event-gallery" class="gallery-grid"></div>
+          </section>
+
+          <!-- Event Schedule -->
+          <section class="event-schedule">
+            <h2 class="section-title">Jadwal Acara</h2>
+            <p>Berikut adalah rundown acara:</p>
+
+            <div id="event-schedule"></div>
+          </section>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="event-sidebar">
+          <div class="event-info-card">
+            <h3 class="section-title">Informasi Event</h3>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="far fa-calendar-alt"></i>
+              </div>
+              <div class="info-content">
+                <h4>Tanggal & Waktu</h4>
+                <p id="event-full-date"></p>
+                <p id="event-time"></p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="info-content">
+                <h4>Lokasi</h4>
+                <p id="event-location-full"></p>
+                <p id="event-address"></p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-ticket-alt"></i>
+              </div>
+              <div class="info-content">
+                <h4>Tiket</h4>
+                <p id="event-price-sidebar"></p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="info-content">
+                <h4>Kapasitas</h4>
+                <p id="event-capacity"></p>
+              </div>
+            </div>
+
+            <div class="map-container">
+              <iframe id="event-map" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="logo">
+            <img src="img/logo_SasarasaBanua.png" alt="Logo Sasarasa Banua" />
+          </div>
+          <div class="footer-logo-text">Sasarasa Banua</div>
+        </div>
+        <div class="footer-links">
+          <a href="../home.html">Beranda</a>
+          <a href="../menu_umkm/umkm.html">UMKM</a>
+          <a href="../menu_resep/resep.html">Resep</a>
+          <a href="blog.html">Blog & Event</a>
+          <a href="../menu_quiz/quiz.html">Quiz</a>
+        </div>
+        <div class="footer-social">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="footer-copyright">
+          &copy; 2025 Sasarasa Banua. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <script>
+      // Function to get URL parameters
+      function getUrlParameter(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+        var results = regex.exec(location.search);
+        return results === null
+          ? ""
+          : decodeURIComponent(results[1].replace(/\+/g, " "));
+      }
+
+      // Toggle mobile menu
+      const tonggel = document.querySelector(".tonggel");
+      const navLinks = document.querySelector(".nav-links");
+
+      tonggel.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        tonggel.innerHTML = navLinks.classList.contains("active")
+          ? '<i class="fas fa-times"></i>'
+          : '<i class="fas fa-bars"></i>';
+      });
+
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+          tonggel.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+      });
+
+      const eventIndex = getUrlParameter("event") || "event2";
+
+      fetch("blog.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const eventData = data[eventIndex];
+
+          // Update hero section
+          document.getElementById("hero-image").src =
+            eventData.gallery[0].image;
+          document.getElementById("hero-image").alt = eventData.gallery[0].alt;
+          document.getElementById("event-day").textContent = eventData.date.day;
+          document.getElementById("event-month").textContent =
+            eventData.date.month;
+          document.getElementById("event-title").textContent = eventData.title;
+          document.getElementById("event-location-name").textContent =
+            eventData.location.name;
+          document.getElementById("event-price").textContent =
+            eventData.price.general;
+
+          document.getElementById("event-description").textContent =
+            eventData.description;
+
+          // Update highlights
+          const highlightsContainer =
+            document.getElementById("event-highlights");
+          eventData.highlights.forEach((highlight) => {
+            const highlightItem = document.createElement("div");
+            highlightItem.className = "highlight-item";
+            highlightItem.innerHTML = `
+                    <div class="highlight-icon">
+                        <i class="${highlight.icon || "fas fa-star"}"></i>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>${highlight.title}</h4>
+                        <p>${highlight.description}</p>
+                    </div>
+                `;
+            highlightsContainer.appendChild(highlightItem);
+          });
+
+          // Update features
+          const featuresContainer = document.getElementById("event-features");
+          const featuresList = document.createElement("ul");
+          featuresList.style.marginLeft = "1.5rem";
+          featuresList.style.lineHeight = "1.8";
+
+          eventData.features.forEach((feature) => {
+            const featureItem = document.createElement("li");
+            featureItem.innerHTML = `<strong>${feature.title}:</strong> ${feature.description}`;
+            featuresList.appendChild(featureItem);
+          });
+
+          featuresContainer.appendChild(featuresList);
+
+          const galleryContainer = document.getElementById("event-gallery");
+
+          function updateGallery() {
+            galleryContainer.innerHTML = "";
+
+            const screenWidth = window.innerWidth;
+            const numImages = screenWidth >= 992 ? 3 : 4;
+
+            eventData.gallery.slice(0, numImages).forEach((image) => {
+              const galleryItem = document.createElement("div");
+              galleryItem.className = "gallery-item";
+              galleryItem.innerHTML = `
+                      <img src="${image.image}" alt="${image.alt}">
+                  `;
+              galleryContainer.appendChild(galleryItem);
+            });
+          }
+
+          updateGallery();
+
+          window.addEventListener("resize", updateGallery);
+
+          // Update schedule
+          const scheduleContainer = document.getElementById("event-schedule");
+          eventData.schedule.forEach((item) => {
+            const scheduleItem = document.createElement("div");
+            scheduleItem.className = "schedule-item";
+            scheduleItem.innerHTML = `
+                    <div class="schedule-time">${item.time}</div>
+                    <div class="schedule-content">
+                        <h4>${item.title}</h4>
+                        <p>${item.description}</p>
+                    </div>
+                `;
+            scheduleContainer.appendChild(scheduleItem);
+          });
+
+          // Update sidebar info
+          document.getElementById("event-full-date").textContent =
+            eventData.date.full_date;
+          document.getElementById("event-time").textContent =
+            eventData.date.time;
+          document.getElementById("event-location-full").textContent =
+            eventData.location.name;
+          document.getElementById("event-address").textContent =
+            eventData.location.address;
+          document.getElementById("event-price-sidebar").textContent =
+            eventData.price.general;
+
+          // Handle capacity display
+          const capacityText =
+            eventData.capacity.participants ||
+            eventData.capacity.general ||
+            "Terbuka untuk umum";
+          document.getElementById("event-capacity").textContent = capacityText;
+
+          // Update map with latitude and longitude (without API key)
+          const mapIframe = document.getElementById("event-map");
+          const latitude = eventData.location.latitude;
+          const longitude = eventData.location.longitude;
+
+          mapIframe.src = `https://maps.google.com/maps?q=${latitude},${longitude}&z=15&output=embed`;
+
+          const mapContainer = document.querySelector(".map-container");
+          const mapLink = document.createElement("a");
+          mapLink.href = `https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`;
+          mapLink.target = "_blank";
+          mapLink.rel = "noopener noreferrer";
+          mapLink.style.position = "absolute";
+          mapLink.style.top = "0";
+          mapLink.style.left = "0";
+          mapLink.style.width = "100%";
+          mapLink.style.height = "100%";
+          mapLink.style.zIndex = "10";
+          mapLink.style.opacity = "0";
+          mapContainer.style.position = "relative";
+          mapContainer.appendChild(mapLink);
+
+          // Add satellite view button
+          const satelliteBtn = document.createElement("button");
+          satelliteBtn.textContent = "Satellite View";
+          satelliteBtn.style.position = "absolute";
+          satelliteBtn.style.bottom = "10px";
+          satelliteBtn.style.right = "10px";
+          satelliteBtn.style.zIndex = "20";
+          satelliteBtn.style.padding = "5px 10px";
+          satelliteBtn.style.backgroundColor = "white";
+          satelliteBtn.style.border = "1px solid #ccc";
+          satelliteBtn.style.borderRadius = "4px";
+          satelliteBtn.style.cursor = "pointer";
+
+          satelliteBtn.addEventListener("click", () => {
+            const isSatellite = mapIframe.src.includes("t=k");
+            if (isSatellite) {
+              mapIframe.src = `https://maps.google.com/maps?q=${latitude},${longitude}&z=15&output=embed`;
+              satelliteBtn.textContent = "Satellite View";
+            } else {
+              mapIframe.src = `https://maps.google.com/maps?q=${latitude},${longitude}&z=15&output=embed&t=k`;
+              satelliteBtn.textContent = "Map View";
+            }
+          });
+
+          mapContainer.appendChild(satelliteBtn);
+
+          // Set page title
+          document.title = `${eventData.title} | Event Detail`;
+        })
+        .catch((error) => {
+          console.error("Error loading event data:", error);
+          alert("Gagal memuat data event. Silakan coba lagi nanti.");
+        });
+    </script>
+  </body>
+</html>
