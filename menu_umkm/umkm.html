@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Umkm Kuliner Banjarmasin | Sasarasa Banua</title>
+    <link
+      rel="shortcut icon"
+      href="img/logo_SasarasaBanua.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="umkm.css" />
+  </head>
+  <body>
+    <!-- Bagian Navbar -->
+    <nav class="navbar">
+      <div class="logo-container">
+        <div class="tonggel">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo">
+          <img src="img/logo_SasarasaBanua.png" alt="Logo Sasarasa Banua" />
+        </div>
+        <div class="logo-text">Sasarasa Banua</div>
+      </div>
+
+      <div class="nav-links">
+        <a href="../home.html">Beranda</a>
+        <a href="umkm.html" class="active">UMKM</a>
+        <a href="../menu_resep/resep.html">Resep</a>
+        <a href="../menu_event/blog.html">Blog & Event</a>
+        <a href="../menu_quiz/quiz.html">Quiz</a>
+      </div>
+
+      <div class="nav-buttons">
+        <!-- Sebelum Masuk -->
+        <a href="#" class="btn-signin" id="signin-button">
+          <i class="fas fa-sign-in-alt"></i> Daftar
+        </a>
+        <a href="#" class="btn-login" id="login-button">
+          <i class="fas fa-user"></i> Masuk
+        </a>
+
+        <!-- Sesudah Masuk -->
+        <div class="user-profile" id="user-view">
+          <div class="user-avatar" id="user-dropdown-btn">
+            <div class="avatar-placeholder" id="user-avatar"></div>
+            <span id="username-display">Username</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Pop Up Masuk -->
+    <div class="modal-overlay" id="login-modal">
+      <div class="modal-container">
+        <div class="modal-header">
+          <h3>Masuk ke Sasarasa Banua</h3>
+          <button class="modal-close" id="close-login">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form id="login-form" class="auth-form">
+            <div class="form-group">
+              <label for="login-email">Email</label>
+              <input
+                type="email"
+                id="login-email"
+                placeholder="Masukkan email Anda"
+                required
+              />
+              <div class="error-message" id="login-email-error"></div>
+            </div>
+            <div class="form-group">
+              <label for="login-password">Password</label>
+              <input
+                type="password"
+                id="login-password"
+                placeholder="Masukkan password Anda"
+                required
+              />
+              <div class="error-message" id="login-password-error"></div>
+            </div>
+            <button type="submit" class="btn-auth">Masuk</button>
+            <div class="auth-divider">
+              <span>atau masuk dengan</span>
+            </div>
+            <button type="button" class="btn-google" id="google-login">
+              <img src="img/logo_google.png" alt="Google Logo" />
+              Google
+            </button>
+            <div class="auth-footer">
+              Belum punya akun?
+              <a href="#" id="switch-to-register">Daftar sekarang</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pop Up Daftar -->
+    <div class="modal-overlay" id="register-modal">
+      <div class="modal-container">
+        <div class="modal-header">
+          <h3>Daftar Akun Baru</h3>
+          <button class="modal-close" id="close-register">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form id="register-form" class="auth-form">
+            <div class="form-group">
+              <label for="register-name">Nama Lengkap</label>
+              <input
+                type="text"
+                id="register-name"
+                placeholder="Masukkan nama lengkap"
+                required
+              />
+              <div class="error-message" id="register-name-error"></div>
+            </div>
+            <div class="form-group">
+              <label for="register-email">Email</label>
+              <input
+                type="email"
+                id="register-email"
+                placeholder="Masukkan email Anda"
+                required
+              />
+              <div class="error-message" id="register-email-error"></div>
+            </div>
+            <div class="form-group">
+              <label for="register-password">Password</label>
+              <input
+                type="password"
+                id="register-password"
+                placeholder="Buat password (min. 8 karakter)"
+                required
+              />
+              <div class="error-message" id="register-password-error"></div>
+            </div>
+            <button type="submit" class="btn-auth">Daftar</button>
+            <div class="auth-divider">
+              <span>atau daftar dengan</span>
+            </div>
+            <button type="button" class="btn-google" id="google-register">
+              <img src="img/logo_google.png" alt="Google Logo" />
+              Google
+            </button>
+            <div class="auth-footer">
+              Sudah punya akun?
+              <a href="#" id="switch-to-login">Masuk sekarang</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pop Up Logout -->
+    <div class="modal-overlay" id="logout-modal">
+      <div class="modal-container">
+        <div class="modal-header">
+          <h3>Keluar Akun</h3>
+          <button class="modal-close" id="close-logout">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="logout-content">
+            <p>Apakah Anda yakin ingin keluar dari akun Anda?</p>
+            <div class="logout-buttons">
+              <button class="btn-cancel" id="cancel-logout">Batal</button>
+              <button class="btn-logout" id="confirm-logout">Keluar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toko UMKM Header -->
+    <header class="toko-header">
+      <h1>Temukan Toko Kuliner Khas Banjarmasin</h1>
+      <p>
+        Jelajahi berbagai toko dan warung makan tradisional yang menyajikan cita
+        rasa autentik Banjar
+      </p>
+    </header>
+
+    <!-- Filter Dan Pencarian -->
+    <section class="toko-filter">
+      <div class="filter-container">
+        <div class="filter-group">
+          <span class="filter-label">Lokasi:</span>
+          <select class="filter-select" id="location-filter">
+            <option value="">Semua Lokasi</option>
+            <option value="banjarmasin">Banjarmasin</option>
+            <option value="banjarbaru">Banjarbaru</option>
+            <option value="martapura">Martapura</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">Kategori:</span>
+          <select class="filter-select" id="category-filter">
+            <option value="">Semua Kategori</option>
+            <option value="restoran">Restoran</option>
+            <option value="warung makan">Warung Makan</option>
+          </select>
+        </div>
+
+        <div class="search-box">
+          <i class="fas fa-search search-icon"></i>
+          <input
+            type="text"
+            class="search-input"
+            id="search-input"
+            placeholder="Cari toko kuliner..."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Pop Up Rengking Warung -->
+    <div class="modal-overlay" id="ranking-modal">
+      <div class="modal-container">
+        <div class="modal-header">
+          <h3>Ranking Warung Kuliner</h3>
+          <button class="modal-close" id="close-ranking">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="ranking-list" id="ranking-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bagian Toko -->
+    <section class="toko-list">
+      <div class="list-header">
+        <h2 class="list-title">Toko Kuliner di Banjarmasin</h2>
+        <select class="sort-select" id="sort-select">
+          <option value="distance">Terdekat</option>
+          <option value="newest">Terbaru</option>
+        </select>
+      </div>
+
+      <div class="toko-grid" id="toko-grid"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="logo">
+            <img src="img/logo_SasarasaBanua.png" alt="Logo Sasarasa Banua" />
+          </div>
+          <div class="footer-logo-text">Sasarasa Banua</div>
+        </div>
+        <div class="footer-links">
+          <a href="#home">Beranda</a>
+          <a href="#umkm">UMKM</a>
+          <a href="#resep">Resep</a>
+          <a href="#blog">Blog & Event</a>
+          <a href="#quiz">Quiz</a>
+        </div>
+        <div class="footer-social">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="footer-copyright">
+          &copy; 2025 Sasarasa Banua. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="umkm.js"></script>
+  </body>
+</html>
