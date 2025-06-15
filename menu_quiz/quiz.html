@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Quiz | Sasarasa Banua</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="quiz.css" />
+  </head>
+  <body>
+    <div class="quiz-container">
+      <!-- Welcome Screen -->
+      <div class="welcome-screen" id="welcomeScreen">
+        <img
+          src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+          alt="Quiz Kuliner Banjar"
+          class="welcome-image"
+        />
+        <h1>Quiz Kuliner Banjarmasin</h1>
+        <p>
+          Uji pengetahuan Anda tentang kuliner khas Banjarmasin dan lihat
+          seberapa dalam pemahaman Anda tentang makanan tradisional Kalimantan
+          Selatan!
+        </p>
+
+        <div class="rules-container">
+          <h3><i class="fas fa-info-circle"></i> Peraturan Quiz</h3>
+          <ul>
+            <li>Quiz terdiri dari 10 pertanyaan tentang kuliner Banjar</li>
+            <li>Setiap pertanyaan memiliki 4 pilihan jawaban</li>
+            <li>Jawaban benar bernilai 10 poin</li>
+            <li>Tidak ada pengurangan nilai untuk jawaban salah</li>
+            <li>Setiap peserta hanya bisa mengikuti quiz sekali</li>
+          </ul>
+        </div>
+
+        <div class="input-container">
+          <i class="fas fa-user input-icon"></i>
+          <input
+            type="text"
+            id="playerName"
+            class="input-name"
+            placeholder="Masukkan nama lengkap Anda"
+            required
+          />
+        </div>
+        <div class="input-container">
+          <i class="fas fa-envelope input-icon"></i>
+          <input
+            type="email"
+            id="playerEmail"
+            class="input-name"
+            placeholder="Masukkan email Anda"
+            required
+          />
+        </div>
+        <div class="input-container">
+          <i class="fas fa-calendar input-icon"></i>
+          <input
+            type="date"
+            id="playerBirthdate"
+            class="input-name"
+            placeholder="Tanggal Lahir"
+            required
+          />
+        </div>
+        <div class="input-container">
+          <i class="fas fa-map-marker-alt input-icon"></i>
+          <input
+            type="text"
+            id="playerBirthplace"
+            class="input-name"
+            placeholder="Tempat Lahir"
+            required
+          />
+        </div>
+        <div class="action-buttons">
+          <button class="start-quiz-btn" id="startQuizBtn">
+            <i class="fas fa-play" style="margin-right: 8px"></i> Mulai Quiz
+          </button>
+          <a href="../home.html" class="exit-quiz-btn" id="exitQuizBtn">
+            <i class="fas fa-sign-out-alt" style="margin-right: 8px"></i> Keluar
+          </a>
+        </div>
+      </div>
+
+      <!-- Quiz Screen -->
+      <div class="quiz-screen" id="quizScreen">
+        <div class="quiz-header">
+          <div class="player-name" id="quizPlayerName">
+            <div class="player-avatar" id="playerAvatar">P</div>
+            <span id="playerNameDisplay">Player</span>
+          </div>
+          <div class="quiz-info">
+            <div class="quiz-info-item">
+              <i class="fas fa-question-circle"></i>
+              <span class="question-count" id="questionCount">1/10</span>
+            </div>
+            <div class="quiz-info-item">
+              <i class="fas fa-star"></i>
+              <span class="score" id="currentScore">0</span>
+            </div>
+            <div class="quiz-info-item">
+              <i class="fas fa-clock"></i>
+              <span class="timer" id="quizTimer">00:00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="question-container">
+          <img
+            id="questionImage"
+            class="question-image"
+            src=""
+            alt="Gambar Soal"
+          />
+          <div class="question-text" id="questionText">
+            Pertanyaan akan muncul di sini
+          </div>
+
+          <div class="options-container" id="optionsContainer"></div>
+        </div>
+      </div>
+
+      <!-- Results Screen -->
+      <div class="results-screen" id="resultsScreen">
+        <h1>Hasil Quiz</h1>
+
+        <div class="results-header">
+          <div class="avatar-container">
+            <div class="avatar-circle" id="avatarInitials">P</div>
+          </div>
+          <div class="score-display" id="finalScore">0</div>
+          <div class="score-text" id="scoreText">
+            Kamu mendapatkan 0 dari 10 pertanyaan benar!
+          </div>
+          <div class="score-message" id="scoreMessage"></div>
+        </div>
+
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+        </div>
+
+        <div class="score-details">
+          <div class="score-detail">
+            <h3>Jawaban Benar</h3>
+            <p id="correctAnswers">0</p>
+          </div>
+          <div class="score-detail">
+            <h3>Jawaban Salah</h3>
+            <p id="wrongAnswers">0</p>
+          </div>
+          <div class="score-detail">
+            <h3>Nilai</h3>
+            <p id="percentageScore">0%</p>
+          </div>
+        </div>
+
+        <div class="buttons-container">
+          <button class="review-btn" id="reviewBtn">
+            <i class="fas fa-search" style="margin-right: 8px"></i> Review Soal
+          </button>
+          <button class="certificate-btn" id="certificateBtn">
+            <i class="fas fa-certificate" style="margin-right: 8px"></i> Lihat
+            Sertifikat
+          </button>
+          <button class="leaderboard-btn" id="leaderboardBtn">
+            <i class="fas fa-trophy" style="margin-right: 8px"></i> Papan Skor
+          </button>
+          <button class="restart-quiz-btn" id="restartQuizBtn">
+            <i class="fas fa-redo" style="margin-right: 8px"></i> Kembali ke
+            Awal
+          </button>
+        </div>
+      </div>
+
+      <!-- Review Screen -->
+      <div class="review-screen" id="reviewScreen">
+        <h1>Review Jawaban</h1>
+        <div id="reviewQuestionsContainer"></div>
+        <button class="certificate-btn" id="certificateFromReviewBtn">
+          <i class="fas fa-certificate" style="margin-right: 8px"></i> Lihat
+          Sertifikat
+        </button>
+        <button class="restart-quiz-btn" id="backToResultsFromReviewBtn">
+          <i class="fas fa-arrow-left" style="margin-right: 8px"></i> Kembali ke
+          Hasil
+        </button>
+      </div>
+
+      <!-- Certificate Screen -->
+      <div class="certificate-screen" id="certificateScreen">
+        <div class="certificate" id="certificateContent">
+          <h1>SERTIFIKAT PENGHARGAAN</h1>
+          <p>Diberikan kepada:</p>
+          <h2 id="certificateName">Nama Peserta</h2>
+          <p>Telah berhasil menyelesaikan</p>
+          <h3>Quiz Kuliner Banjarmasin</h3>
+          <p>dengan perolehan skor:</p>
+          <div class="certificate-score" id="certificateScoreDisplay">
+            0/100
+          </div>
+          <div class="certificate-message" id="certificateMessage"></div>
+          <p class="certificate-date" id="certificateDate">
+            Tanggal: 14 Juni 2025
+          </p>
+
+          <div class="certificate-footer">
+            <div class="certificate-signature">
+              <p>Fauzi Rahman</p>
+              <p>Direktur Sasarasa Banua</p>
+            </div>
+            <div class="certificate-signature">
+              <img
+                src="img/logo_SasarasaBanua.png"
+                alt="Logo Sasarasa Banua"
+                class="stamp-logo"
+              />
+              <p>Stempel Resmi</p>
+            </div>
+          </div>
+        </div>
+        <button class="download-certificate" id="downloadCertificateBtn">
+          <i class="fas fa-download" style="margin-right: 8px"></i> Download
+          Sertifikat
+        </button>
+        <button class="restart-quiz-btn" id="backToResultsFromCertificateBtn">
+          <i class="fas fa-arrow-left" style="margin-right: 8px"></i> Kembali ke
+          Hasil
+        </button>
+      </div>
+
+      <!-- Leaderboard Screen -->
+      <div class="leaderboard-screen" id="leaderboardScreen">
+        <h1>Papan Skor</h1>
+        <div class="leaderboard-header">
+          <div class="leaderboard-filter">
+            <button class="filter-btn active" id="dailyLeaderboardBtn">
+              Harian
+            </button>
+            <button class="filter-btn" id="allTimeLeaderboardBtn">
+              Semua Waktu
+            </button>
+          </div>
+          <div class="leaderboard-time">
+            <i class="fas fa-sync-alt" id="refreshLeaderboard"></i>
+            <span id="leaderboardLastUpdated">Diperbarui: Baru saja</span>
+          </div>
+        </div>
+
+        <div class="leaderboard-container" id="leaderboardContainer"></div>
+
+        <div class="your-score" id="yourScoreContainer">
+          <h3>Skor Anda</h3>
+          <div class="your-score-details">
+            <div class="your-rank">
+              <i class="fas fa-crown"></i>
+              <span id="yourRank">-</span>
+            </div>
+            <div class="your-name">
+              <div class="your-avatar" id="yourLeaderboardAvatar">P</div>
+              <span id="yourLeaderboardName">Anda</span>
+            </div>
+            <div class="your-points"><span id="yourScore">0</span> poin</div>
+            <div class="your-time"><span id="yourTime">0</span> detik</div>
+          </div>
+        </div>
+
+        <button class="restart-quiz-btn" id="backToResultsFromLeaderboardBtn">
+          <i class="fas fa-arrow-left" style="margin-right: 8px"></i> Kembali ke
+          Hasil
+        </button>
+      </div>
+
+      <!-- Feedback Modal -->
+      <div class="feedback-modal" id="feedbackModal">
+        <div class="feedback-content" id="feedbackContent">
+          <div class="feedback-icon" id="feedbackIcon">
+            <i class="fas fa-check"></i>
+          </div>
+          <h2 class="feedback-title" id="feedbackTitle">Jawaban Benar!</h2>
+          <p class="feedback-text" id="feedbackText">
+            Penjelasan akan muncul di sini
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="quiz.js"></script>
+  </body>
+</html>
