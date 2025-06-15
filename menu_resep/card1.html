@@ -248,7 +248,7 @@
 
       .video-wrapper {
         position: relative;
-        padding-bottom: 56.25%; 
+        padding-bottom: 56.25%;
         height: 0;
         overflow: hidden;
       }
@@ -727,7 +727,7 @@
         <a href="../home.html">Beranda</a>
         <a href="../menu_umkm/umkm.html">UMKM</a>
         <a href="resep.html" class="active">Resep</a>
-        <a href="../menu_event/blog.htm">Blog & Event</a>
+        <a href="../menu_event/blog.html">Blog & Event</a>
         <a href="../menu_quiz/quiz.html">Quiz</a>
       </div>
 
@@ -737,12 +737,10 @@
     </nav>
 
     <!-- Resep Detail Header -->
-    <div class="resep-detail-header" id="resep-header">
-    </div>
+    <div class="resep-detail-header" id="resep-header"></div>
 
     <!-- Resep Content -->
-    <div class="resep-content" id="resep-container">
-    </div>
+    <div class="resep-content" id="resep-container"></div>
 
     <!-- Footer -->
     <footer>
@@ -1005,7 +1003,7 @@
           let count = 0;
 
           while (count < 8 && count < totalRecipes - 1) {
-            if (index >= totalRecipes) index = 0; 
+            if (index >= totalRecipes) index = 0;
 
             if (index !== currentIndex) {
               related.push(recipes[index]);
