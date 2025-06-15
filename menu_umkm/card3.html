@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dapur Resto Galuh | Umkm | Sasarasa Banua</title>
+    <link
+      rel="shortcut icon"
+      href="img/logo_SasarasaBanua.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="card.css" />
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="img/logo_SasarasaBanua.png" alt="Sasarasa Banua Logo" />
+        </div>
+        <span class="logo-text">Sasarasa Banua</span>
+      </div>
+      <div class="nav-links">
+        <a href="../home.html">Beranda</a>
+        <a href="umkm.html" class="active">UMKM</a>
+        <a href="../menu_resep/resep.html">Resep</a>
+        <a href="../menu_event/blog.html">Blog & Event</a>
+        <a href="../menu_quiz/quiz.html">Quiz</a>
+      </div>
+      <div class="tonggel">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <!-- UMKM Detail Section -->
+    <section id="umkm-detail">
+      <div class="container">
+        <div class="umkm-header">
+          <div class="header-content">
+            <div class="image-gallery">
+              <div class="gallery-main">
+                <img
+                  id="main-gallery-image"
+                  src=""
+                  alt="UMKM Image"
+                  class="active-gallery-image"
+                />
+              </div>
+              <div class="gallery-nav" id="gallery-nav-dots"></div>
+              <div class="gallery-controls">
+                <button class="gallery-btn prev-btn">
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="gallery-btn next-btn">
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- UMKM Info -->
+            <div class="umkm-info">
+              <div class="umkm-title">
+                <div>
+                  <h1 class="umkm-name" id="umkm-name">Loading...</h1>
+                </div>
+                <div class="umkm-rating">
+                  <div class="rating-stars" id="rating-stars">
+                    <!-- Stars will be added dynamically -->
+                  </div>
+                  <span class="rating-value" id="rating-value">0</span>
+                  <span class="rating-count" id="rating-count"
+                    >(0 reviews)</span
+                  >
+                </div>
+              </div>
+
+              <div class="umkm-meta">
+                <div class="meta-item">
+                  <div class="meta-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="meta-text">
+                    <span class="meta-label">Lokasi</span>
+                    <span class="meta-value" id="umkm-address">Loading...</span>
+                  </div>
+                </div>
+                <div class="meta-item">
+                  <div class="meta-icon">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <div class="meta-text">
+                    <span class="meta-label">Jam Buka</span>
+                    <span class="meta-value" id="umkm-hours">Loading...</span>
+                  </div>
+                </div>
+                <div class="meta-item">
+                  <div class="meta-icon">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div class="meta-text">
+                    <span class="meta-label">Telepon</span>
+                    <span class="meta-value" id="umkm-phone">Loading...</span>
+                  </div>
+                </div>
+                <div class="meta-item">
+                  <div class="meta-icon">
+                    <i class="fas fa-wallet"></i>
+                  </div>
+                  <div class="meta-text">
+                    <span class="meta-label">Harga</span>
+                    <span class="meta-value" id="umkm-price-range"
+                      >Loading...</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <p class="umkm-description" id="umkm-description">
+                Loading description...
+              </p>
+
+              <div class="action-buttons">
+                <a href="#" class="action-btn btn-primary" id="phone-btn">
+                  <i class="fas fa-phone-alt"></i>
+                  <span>Hubungi</span>
+                </a>
+                <a
+                  href="#"
+                  class="action-btn btn-secondary"
+                  id="directions-btn"
+                >
+                  <i class="fas fa-directions"></i>
+                  <span>Petunjuk Arah</span>
+                </a>
+                <a href="#" class="action-btn btn-accent" id="share-btn">
+                  <i class="fas fa-share-alt"></i>
+                  <span>Bagikan</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Details Section -->
+        <div class="details-section">
+          <div class="detail-card">
+            <h3 class="subsection-title">
+              <i class="fas fa-utensils"></i>
+              <span>Fasilitas</span>
+            </h3>
+            <div class="facilities-grid" id="facilities-grid">
+            </div>
+          </div>
+
+          <!-- Location Card -->
+          <div class="detail-card">
+            <h3 class="subsection-title">
+              <i class="fas fa-map-marked-alt"></i>
+              <span>Lokasi</span>
+            </h3>
+            <div class="location-map">
+              <div class="map-container" id="map-container">
+                <div class="map-placeholder" id="map-placeholder">
+                  <i class="fas fa-map"></i>
+                  <span>Memuat peta...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Section -->
+        <div class="menu-section">
+          <h3 class="subsection-title">
+            <i class="fas fa-utensils"></i>
+            <span>Menu</span>
+          </h3>
+          <div class="menu-items" id="menu-items">
+          </div>
+        </div>
+
+        <!-- Rating Section -->
+        <div class="rating-section">
+          <h3 class="subsection-title">
+            <i class="fas fa-star"></i>
+            <span>Rating & Ulasan</span>
+          </h3>
+          <div class="rating-grid">
+            <div class="rating-card">
+              <div class="rating-category">Kerapihan</div>
+              <div class="rating-value-large" id="cleanliness-rating">0</div>
+              <div class="rating-stars-small" id="cleanliness-rating-stars">
+              </div>
+              <div class="rating-count" id="cleanliness-count">0 ulasan</div>
+            </div>
+            <div class="rating-card">
+              <div class="rating-category">Desain Interior</div>
+              <div class="rating-value-large" id="interior-rating">0</div>
+              <div class="rating-stars-small" id="interior-rating-stars">
+              </div>
+              <div class="rating-count" id="interior-count">0 ulasan</div>
+            </div>
+            <div class="rating-card">
+              <div class="rating-category">Pelayanan</div>
+              <div class="rating-value-large" id="service-rating">0</div>
+              <div class="rating-stars-small" id="service-rating-stars">
+              </div>
+              <div class="rating-count" id="service-count">0 ulasan</div>
+            </div>
+            <div class="rating-card">
+              <div class="rating-category">Kenyamanan</div>
+              <div class="rating-value-large" id="comfort-rating">0</div>
+              <div class="rating-stars-small" id="comfort-rating-stars">
+              </div>
+              <div class="rating-count" id="comfort-count">0 ulasan</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reviews Section -->
+        <div class="reviews-section">
+          <div class="reviews-header">
+            <h3 class="subsection-title">
+              <i class="fas fa-comments"></i>
+              <span>Ulasan Pelanggan</span>
+            </h3>
+            <button class="btn-add-review" id="addReviewBtn">
+              <i class="fas fa-plus"></i>
+              <span>Tambah Ulasan</span>
+            </button>
+          </div>
+          <div class="reviews-list" id="reviews-list">
+            <!-- Reviews will be added dynamically -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comment Modal -->
+    <div class="comment-modal" id="login-prompt-modal">
+      <div class="comment-container">
+        <div class="login-prompt">
+          <i
+            class="fas fa-user-lock"
+            style="
+              font-size: 3rem;
+              color: var(--primary-color);
+              margin-bottom: 20px;
+            "
+          ></i>
+          <h3 class="comment-title">Masuk untuk Memberi Ulasan</h3>
+          <p>
+            Anda perlu masuk ke akun Anda untuk dapat memberikan ulasan dan
+            rating.
+          </p>
+          <div class="auth-buttons">
+            <a href="umkm.html#login" class="auth-btn btn-login">Masuk</a>
+            <a href="umkm.html#register" class="auth-btn btn-signup">Daftar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Action Button -->
+    <button class="fab">
+      <i class="fas fa-comment-alt"></i>
+    </button>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="logo">
+            <img src="img/logo_SasarasaBanua.png" alt="Logo Sasarasa Banua" />
+          </div>
+          <div class="footer-logo-text">Sasarasa Banua</div>
+        </div>
+        <div class="footer-links">
+          <a href="../home.html">Beranda</a>
+          <a href="umkm.html" class="active">UMKM</a>
+          <a href="../menu_resep/resep.html">Resep</a>
+          <a href="../menu_event/blog.html">Blog & Event</a>
+          <a href="../menu_quiz/quiz.html">Quiz</a>
+        </div>
+        <p class="footer-copyright">
+          &copy; 2025 Sasarasa Banua. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script>
+      // Navbar Scroll Effect
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // Mobile Menu Toggle
+      const tonggel = document.querySelector(".tonggel");
+      const navLinks = document.querySelector(".nav-links");
+
+      tonggel.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+      });
+
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", function () {
+          navLinks.classList.remove("active");
+        });
+      });
+
+      // Initialize Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyCIJdO2xVLkFCFxJTX3v4iiVoRPGBbh2_M",
+        authDomain: "sasarasabanua.firebaseapp.com",
+        databaseURL: "https://sasarasabanua-default-rtdb.firebaseio.com",
+        projectId: "sasarasabanua",
+        storageBucket: "sasarasabanua.appspot.com",
+        messagingSenderId: "1053878236014",
+        appId: "1:1053878236014:web:4029e4bd9e3a31b73e077f",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+      const database = firebase.database();
+      const auth = firebase.auth();
+      const provider = new firebase.auth.GoogleAuthProvider();
+
+      // Current UMKM data and state
+      let currentUmkm = {};
+      let currentUser = null;
+      let currentReviews = {};
+      let currentRatings = {
+        cleanliness: 0,
+        interior: 0,
+        service: 0,
+        comfort: 0,
+      };
+
+      // DOM Elements
+      const elements = {
+        // UMKM Info
+        umkmName: document.getElementById("umkm-name"),
+        umkmAddress: document.getElementById("umkm-address"),
+        umkmHours: document.getElementById("umkm-hours"),
+        umkmPhone: document.getElementById("umkm-phone"),
+        umkmPriceRange: document.getElementById("umkm-price-range"),
+        umkmDescription: document.getElementById("umkm-description"),
+
+        // Rating Elements
+        ratingValue: document.getElementById("rating-value"),
+        ratingStars: document.getElementById("rating-stars"),
+        ratingCount: document.getElementById("rating-count"),
+
+        // Category Ratings
+        cleanlinessRating: document.getElementById("cleanliness-rating"),
+        cleanlinessStars: document.getElementById("cleanliness-rating-stars"),
+        cleanlinessCount: document.getElementById("cleanliness-count"),
+
+        interiorRating: document.getElementById("interior-rating"),
+        interiorStars: document.getElementById("interior-rating-stars"),
+        interiorCount: document.getElementById("interior-count"),
+
+        serviceRating: document.getElementById("service-rating"),
+        serviceStars: document.getElementById("service-rating-stars"),
+        serviceCount: document.getElementById("service-count"),
+
+        comfortRating: document.getElementById("comfort-rating"),
+        comfortStars: document.getElementById("comfort-rating-stars"),
+        comfortCount: document.getElementById("comfort-count"),
+
+        // Action Buttons
+        phoneBtn: document.getElementById("phone-btn"),
+        directionsBtn: document.getElementById("directions-btn"),
+        shareBtn: document.getElementById("share-btn"),
+
+        facilitiesGrid: document.getElementById("facilities-grid"),
+
+        menuItems: document.getElementById("menu-items"),
+
+        reviewsList: document.getElementById("reviews-list"),
+        addReviewBtn: document.getElementById("addReviewBtn"),
+
+        loginPromptModal: document.getElementById("login-prompt-modal"),
+        commentModal: document.querySelector(".comment-modal"),
+        commentContainer: document.querySelector(".comment-container"),
+      };
+
+      // Initialize the page
+      document.addEventListener("DOMContentLoaded", () => {
+
+        checkAuthState();
+
+        const umkmId = getUmkmIdFromUrl();
+
+        loadUmkmData(umkmId);
+
+        setupEventListeners();
+
+        initImageGallery();
+      });
+
+      function checkAuthState() {
+        auth.onAuthStateChanged((user) => {
+          currentUser = user;
+          if (user) {
+
+            localStorage.setItem(
+              "firebaseUser",
+              JSON.stringify({
+                uid: user.uid,
+                email: user.email,
+                displayName: user.displayName,
+              })
+            );
+          } else {
+  
+            localStorage.removeItem("firebaseUser");
+          }
+        });
+      }
+
+      // Get UMKM ID from URL parameter
+      function getUmkmIdFromUrl() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get("id") || "warung3_toko";
+      }
+
+      // Load UMKM data from Firebase
+      async function loadUmkmData(umkmId) {
+        try {
+
+          const warungNumber = umkmId.match(/\d+/)?.[0] || "1";
+          const menuId = `warung0${warungNumber}_menu`;
+          const reviewsId = `warung${warungNumber}_komentar_umkm`;
+          console.log("Data gambar_toko:", currentUmkm.gambar_toko);
+
+          const [umkmSnapshot, menuSnapshot, reviewsSnapshot] =
+            await Promise.all([
+              database.ref(`menu_umkm/umkm/${umkmId}`).once("value"),
+              database.ref(`menu_umkm/menu/${menuId}`).once("value"),
+              database
+                .ref(`menu_umkm/komentar_umkm/${reviewsId}`)
+                .once("value"),
+            ]);
+
+          // Process UMKM data
+          if (umkmSnapshot.exists()) {
+            currentUmkm = umkmSnapshot.val();
+            displayUmkmInfo();
+            displayFacilities();
+            initImageGallery();
+            displayMap();
+          }
+
+          // Process menu data
+          if (menuSnapshot.exists()) {
+            displayMenuItems(menuSnapshot.val());
+          }
+
+          if (reviewsSnapshot.exists()) {
+            currentReviews = reviewsSnapshot.val();
+            calculateAndDisplayRatings();
+            displayReviews();
+          }
+        } catch (error) {
+          console.error("Error loading UMKM data:", error);
+          alert("Gagal memuat data UMKM. Silakan coba lagi nanti.");
+        }
+      }
+
+      // Display UMKM information
+      function displayUmkmInfo() {
+        elements.umkmName.textContent = currentUmkm.nama_toko || "Nama Toko";
+        elements.umkmAddress.textContent =
+          currentUmkm.alamat || "Alamat tidak tersedia";
+        elements.umkmHours.textContent =
+          currentUmkm.jam_buka || "Jam buka tidak tersedia";
+        elements.umkmPhone.textContent =
+          currentUmkm.telepon || "Telepon tidak tersedia";
+        elements.umkmPriceRange.textContent =
+          currentUmkm.range_harga || "Harga tidak tersedia";
+        elements.umkmDescription.textContent =
+          currentUmkm.deskripsi || "Deskripsi tidak tersedia";
+
+        if (currentUmkm.telepon) {
+          const phoneNumber = currentUmkm.telepon.replace(/^0/, "62");
+          elements.phoneBtn.href = `https://wa.me/${phoneNumber}`;
+        }
+
+        if (currentUmkm.alamat) {
+          elements.directionsBtn.href = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+            currentUmkm.alamat
+          )}`;
+        }
+
+        elements.shareBtn.href = `whatsapp://send?text=Lihat ${currentUmkm.nama_toko} di Sasarasa Banua: ${window.location.href}`;
+      }
+
+      // Display facilities
+      function displayFacilities() {
+        if (!currentUmkm.fasilitas) {
+          elements.facilitiesGrid.innerHTML =
+            "<p>Tidak ada fasilitas yang tercantum</p>";
+          return;
+        }
+
+        const facilities = currentUmkm.fasilitas.split(", ");
+        elements.facilitiesGrid.innerHTML = facilities
+          .map((facility) => {
+            let icon = "fa-utensils";
+            if (facility.includes("AC")) icon = "fa-snowflake";
+            else if (facility.includes("toilet")) icon = "fa-toilet";
+            else if (facility.includes("parkir")) icon = "fa-parking";
+            else if (facility.includes("wifi")) icon = "fa-wifi";
+            else if (facility.includes("VIP")) icon = "fa-crown";
+
+            return `
+        <div class="facility-item">
+          <div class="facility-icon">
+            <i class="fas ${icon}"></i>
+          </div>
+          <span class="facility-name">${facility}</span>
+        </div>
+      `;
+          })
+          .join("");
+      }
+
+      function displayMap() {
+        const mapPlaceholder = document.querySelector(".map-placeholder");
+
+        if (currentUmkm.lat && currentUmkm.lng) {
+          const lat = parseFloat(currentUmkm.lat);
+          const lng = parseFloat(currentUmkm.lng);
+
+          mapPlaceholder.innerHTML = `
+        <iframe 
+          width="100%" 
+          height="100%" 
+          frameborder="0" 
+          style="border:0"
+          src="https://maps.google.com/maps?q=${lat},${lng}&z=15&output=embed"
+          allowfullscreen>
+        </iframe>
+        <a href="https://www.google.com/maps?q=${lat},${lng}" 
+          target="_blank" 
+          style="position:absolute;bottom:10px;right:10px;background:white;padding:5px 10px;border-radius:5px;text-decoration:none;color:var(--primary-color);font-weight:bold;">
+          Buka di Google Maps
+        </a>
+      `;
+        } else {
+          mapPlaceholder.innerHTML = `
+        <i class="fas fa-map-marked-alt"></i>
+        <span>Lokasi tidak tersedia</span>
+      `;
+        }
+      }
+
+      function displayMenuItems(menuData) {
+        if (!menuData) {
+          elements.menuItems.innerHTML = "<p>Menu tidak tersedia</p>";
+          return;
+        }
+
+        let itemsDisplayed = 0;
+        elements.menuItems.innerHTML = "";
+
+        for (const menuId in menuData) {
+          if (itemsDisplayed >= 3) break;
+
+          const menuItem = menuData[menuId];
+          elements.menuItems.innerHTML += `
+        <div class="menu-item">
+          <div class="menu-item-image">
+            <img src="${menuItem.gambar || "img/default-food.jpg"}" alt="${
+            menuItem.nama
+          }" />
+          </div>
+          <div class="menu-item-details">
+            <h4 class="menu-item-name">${menuItem.nama || "Menu"}</h4>
+            <p class="menu-item-price">${formatRupiah(menuItem.harga || 0)}</p>
+            <p class="menu-item-description">${
+              menuItem.deskripsi || "Deskripsi tidak tersedia"
+            }</p>
+            <div class="menu-item-meta">
+              <div class="menu-item-rating">
+                ${createStarRating(menuItem.rating || 0)}
+                <span>${(menuItem.rating || 0).toFixed(1)}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+          itemsDisplayed++;
+        }
+      }
+
+      // Calculate and display ratings
+      function calculateAndDisplayRatings() {
+        if (!currentReviews) {
+
+          resetRatings();
+          return;
+        }
+
+        let totalReviews = 0;
+        let totalInterior = 0;
+        let totalService = 0;
+        let totalComfort = 0;
+        let totalCleanliness = 0;
+
+        for (const reviewId in currentReviews) {
+          const review = currentReviews[reviewId];
+          if (review.rating_toko) {
+            totalInterior += review.rating_toko.desain_interior || 0;
+            totalService += review.rating_toko.kualitas_pelayanan || 0;
+            totalComfort += review.rating_toko.kenyamanan || 0;
+            totalCleanliness += review.rating_toko.kerapihan || 0;
+            totalReviews++;
+          }
+        }
+
+        const avgRatings = {
+          cleanliness: totalReviews > 0 ? totalCleanliness / totalReviews : 0,
+          interior: totalReviews > 0 ? totalInterior / totalReviews : 0,
+          service: totalReviews > 0 ? totalService / totalReviews : 0,
+          comfort: totalReviews > 0 ? totalComfort / totalReviews : 0,
+          count: totalReviews,
+        };
+
+        elements.cleanlinessRating.textContent =
+          avgRatings.cleanliness.toFixed(1);
+        elements.cleanlinessStars.innerHTML = createStarRating(
+          avgRatings.cleanliness
+        );
+        elements.cleanlinessCount.textContent = `${avgRatings.count} ulasan`;
+
+        elements.interiorRating.textContent = avgRatings.interior.toFixed(1);
+        elements.interiorStars.innerHTML = createStarRating(
+          avgRatings.interior
+        );
+        elements.interiorCount.textContent = `${avgRatings.count} ulasan`;
+
+        elements.serviceRating.textContent = avgRatings.service.toFixed(1);
+        elements.serviceStars.innerHTML = createStarRating(avgRatings.service);
+        elements.serviceCount.textContent = `${avgRatings.count} ulasan`;
+
+        elements.comfortRating.textContent = avgRatings.comfort.toFixed(1);
+        elements.comfortStars.innerHTML = createStarRating(avgRatings.comfort);
+        elements.comfortCount.textContent = `${avgRatings.count} ulasan`;
+
+        const overallRating =
+          (avgRatings.cleanliness +
+            avgRatings.interior +
+            avgRatings.service +
+            avgRatings.comfort) /
+          4;
+
+        elements.ratingValue.textContent = overallRating.toFixed(1);
+        elements.ratingStars.innerHTML = createStarRating(overallRating);
+        elements.ratingCount.textContent = `(${avgRatings.count} ulasan)`;
+      }
+
+      // Reset ratings display
+      function resetRatings() {
+        const zeroText = "0";
+        const zeroStars = createStarRating(0);
+        const zeroCount = "0 ulasan";
+
+        elements.cleanlinessRating.textContent = zeroText;
+        elements.cleanlinessStars.innerHTML = zeroStars;
+        elements.cleanlinessCount.textContent = zeroCount;
+
+        elements.interiorRating.textContent = zeroText;
+        elements.interiorStars.innerHTML = zeroStars;
+        elements.interiorCount.textContent = zeroCount;
+
+        elements.serviceRating.textContent = zeroText;
+        elements.serviceStars.innerHTML = zeroStars;
+        elements.serviceCount.textContent = zeroCount;
+
+        elements.comfortRating.textContent = zeroText;
+        elements.comfortStars.innerHTML = zeroStars;
+        elements.comfortCount.textContent = zeroCount;
+
+        elements.ratingValue.textContent = zeroText;
+        elements.ratingStars.innerHTML = zeroStars;
+        elements.ratingCount.textContent = zeroCount;
+      }
+
+      function displayReviews() {
+        if (!currentReviews || Object.keys(currentReviews).length === 0) {
+          elements.reviewsList.innerHTML = `
+        <div class="review-item">
+          <p style="text-align: center; color: var(--text-light);">
+            Belum ada ulasan untuk UMKM ini. Jadilah yang pertama memberikan ulasan!
+          </p>
+        </div>
+      `;
+          return;
+        }
+
+        elements.reviewsList.innerHTML = "";
+
+        for (const reviewId in currentReviews) {
+          const review = currentReviews[reviewId];
+          const firstLetter = review.nama_komentator
+            ? review.nama_komentator.charAt(0).toUpperCase()
+            : "A";
+
+          const rating = review.rating_toko
+            ? (review.rating_toko.desain_interior +
+                review.rating_toko.kualitas_pelayanan +
+                review.rating_toko.kenyamanan +
+                review.rating_toko.kerapihan) /
+              4
+            : 0;
+
+          elements.reviewsList.innerHTML += `
+        <div class="review-item">
+          <div class="review-header">
+            <div class="review-avatar">${firstLetter}</div>
+            <div class="review-user">
+              <h4 class="review-name">${
+                review.nama_komentator || "Anonymous"
+              }</h4>
+              <span class="review-date">${review.tanggal_kunjungan || ""}</span>
+            </div>
+            <div class="review-rating">
+              ${createStarRating(rating)}
+            </div>
+          </div>
+          <p class="review-content">
+            <strong>${review.judul || "Review"}</strong><br>
+            ${review.komentar || "Tidak ada teks ulasan."}
+          </p>
+        </div>
+      `;
+        }
+      }
+
+      // Format price to Indonesian Rupiah
+      function formatRupiah(price) {
+        return new Intl.NumberFormat("id-ID", {
+          style: "currency",
+          currency: "IDR",
+          minimumFractionDigits: 0,
+        }).format(price);
+      }
+
+      function createStarRating(rating, maxRating = 5) {
+        let stars = "";
+        const fullStars = Math.floor(rating);
+        const hasHalfStar = rating % 1 >= 0.5;
+
+        for (let i = 1; i <= maxRating; i++) {
+          if (i <= fullStars) {
+            stars += '<i class="fas fa-star"></i>';
+          } else if (i === fullStars + 1 && hasHalfStar) {
+            stars += '<i class="fas fa-star-half-alt"></i>';
+          } else {
+            stars += '<i class="far fa-star"></i>';
+          }
+        }
+
+        return stars;
+      }
+
+      // Initialize image gallery
+      function initImageGallery() {
+        const mainImage = document.getElementById("main-gallery-image");
+        const galleryNav = document.getElementById("gallery-nav-dots");
+        const prevBtn = document.querySelector(".prev-btn");
+        const nextBtn = document.querySelector(".next-btn");
+
+        let currentIndex = 0;
+        let images = [];
+
+        if (currentUmkm.gambar_toko) {
+          if (currentUmkm.gambar_toko.gambar1)
+            images.push(currentUmkm.gambar_toko.gambar1);
+          if (currentUmkm.gambar_toko.gambar2)
+            images.push(currentUmkm.gambar_toko.gambar2);
+          if (currentUmkm.gambar_toko.gambar3)
+            images.push(currentUmkm.gambar_toko.gambar3);
+        }
+
+        if (images.length === 0) {
+          images.push("img/default-umkm.jpg"); 
+        }
+
+        mainImage.src = images[0];
+        mainImage.alt = currentUmkm.nama_toko || "UMKM Image";
+
+        galleryNav.innerHTML = "";
+        images.forEach((_, index) => {
+          const dot = document.createElement("div");
+          dot.className = "nav-dot";
+          if (index === 0) dot.classList.add("active");
+          dot.addEventListener("click", () => {
+            currentIndex = index;
+            updateGallery();
+          });
+          galleryNav.appendChild(dot);
+        });
+
+        function updateGallery() {
+          mainImage.src = images[currentIndex];
+          mainImage.alt = currentUmkm.nama_toko || "UMKM Image";
+
+          const dots = document.querySelectorAll(".nav-dot");
+          dots.forEach((dot, index) => {
+            if (index === currentIndex) {
+              dot.classList.add("active");
+            } else {
+              dot.classList.remove("active");
+            }
+          });
+        }
+
+        // Button event listeners
+        prevBtn.addEventListener("click", () => {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          updateGallery();
+        });
+
+        nextBtn.addEventListener("click", () => {
+          currentIndex = (currentIndex + 1) % images.length;
+          updateGallery();
+        });
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowLeft") {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateGallery();
+          } else if (e.key === "ArrowRight") {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateGallery();
+          }
+        });
+      }
+
+      function setupEventListeners() {
+
+        elements.addReviewBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          if (currentUser) {
+            showReviewModal();
+          } else {
+            elements.loginPromptModal.classList.add("active");
+
+            localStorage.setItem("redirectAfterLogin", window.location.href);
+          }
+        });
+
+        // Share button
+        elements.shareBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          shareUMKM();
+        });
+
+        const fab = document.querySelector(".fab");
+        if (fab) {
+          fab.addEventListener("click", () => {
+            if (currentUser) {
+              showReviewModal();
+            } else {
+              elements.loginPromptModal.classList.add("active");
+            }
+          });
+        }
+      }
+
+      // Show review modal
+      function showReviewModal() {
+        const modal = document.createElement("div");
+        modal.className = "comment-modal active";
+        modal.innerHTML = `
+      <div class="comment-container">
+        <div class="comment-header">
+          <h3 class="comment-title">Tambah Ulasan</h3>
+          <button class="close-comment">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="comment-body">
+          <div class="rating-inputs">
+            <div class="rating-input-group">
+              <label class="rating-label">Kerapihan</label>
+              <div class="star-rating" id="cleanliness-rating-input">
+                <i class="far fa-star" data-rating="1"></i>
+                <i class="far fa-star" data-rating="2"></i>
+                <i class="far fa-star" data-rating="3"></i>
+                <i class="far fa-star" data-rating="4"></i>
+                <i class="far fa-star" data-rating="5"></i>
+              </div>
+            </div>
+            <div class="rating-input-group">
+              <label class="rating-label">Desain Interior</label>
+              <div class="star-rating" id="interior-rating-input">
+                <i class="far fa-star" data-rating="1"></i>
+                <i class="far fa-star" data-rating="2"></i>
+                <i class="far fa-star" data-rating="3"></i>
+                <i class="far fa-star" data-rating="4"></i>
+                <i class="far fa-star" data-rating="5"></i>
+              </div>
+            </div>
+            <div class="rating-input-group">
+              <label class="rating-label">Pelayanan</label>
+              <div class="star-rating" id="service-rating-input">
+                <i class="far fa-star" data-rating="1"></i>
+                <i class="far fa-star" data-rating="2"></i>
+                <i class="far fa-star" data-rating="3"></i>
+                <i class="far fa-star" data-rating="4"></i>
+                <i class="far fa-star" data-rating="5"></i>
+              </div>
+            </div>
+            <div class="rating-input-group">
+              <label class="rating-label">Kenyamanan</label>
+              <div class="star-rating" id="comfort-rating-input">
+                <i class="far fa-star" data-rating="1"></i>
+                <i class="far fa-star" data-rating="2"></i>
+                <i class="far fa-star" data-rating="3"></i>
+                <i class="far fa-star" data-rating="4"></i>
+                <i class="far fa-star" data-rating="5"></i>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Judul Ulasan</label>
+              <input type="text" class="form-input" id="review-title" placeholder="Judul ulasan Anda">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Komentar</label>
+              <textarea class="form-textarea" id="review-comment" placeholder="Bagikan pengalaman Anda"></textarea>
+            </div>
+          </div>
+          <div class="comment-footer">
+            <button class="btn-cancel" id="cancel-review">Batal</button>
+            <button class="btn-submit" id="submit-review">Kirim Ulasan</button>
+          </div>
+        </div>
+      </div>
+    `;
+
+        document.body.appendChild(modal);
+
+        // Add event listeners for stars
+        document.querySelectorAll(".star-rating i").forEach((star) => {
+          star.addEventListener("click", function () {
+            const rating = parseInt(this.getAttribute("data-rating"));
+            const parent = this.parentElement;
+            parent.querySelectorAll("i").forEach((s, index) => {
+              if (index < rating) {
+                s.classList.remove("far");
+                s.classList.add("fas");
+              } else {
+                s.classList.remove("fas");
+                s.classList.add("far");
+              }
+            });
+          });
+        });
+
+        modal.querySelector(".close-comment").addEventListener("click", () => {
+          modal.classList.remove("active");
+          setTimeout(() => modal.remove(), 300);
+        });
+
+        modal.querySelector("#cancel-review").addEventListener("click", () => {
+          modal.classList.remove("active");
+          setTimeout(() => modal.remove(), 300);
+        });
+
+        modal
+          .querySelector("#submit-review")
+          .addEventListener("click", submitReview);
+      }
+
+      async function submitReview() {
+        const submitBtn = document.getElementById("submit-review");
+        submitBtn.innerHTML =
+          '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
+        submitBtn.disabled = true;
+
+        try {
+ 
+          const ratings = {
+            cleanliness: getSelectedRatingFromInput("cleanliness-rating-input"),
+            interior: getSelectedRatingFromInput("interior-rating-input"),
+            service: getSelectedRatingFromInput("service-rating-input"),
+            comfort: getSelectedRatingFromInput("comfort-rating-input"),
+          };
+
+          if (Object.values(ratings).some((r) => r === 0)) {
+            throw new Error("Harap beri rating untuk semua kategori");
+          }
+
+          const reviewTitle = document
+            .getElementById("review-title")
+            .value.trim();
+          const reviewComment = document
+            .getElementById("review-comment")
+            .value.trim();
+
+          if (!reviewComment) {
+            throw new Error("Harap tulis ulasan Anda");
+          }
+
+          const newReview = {
+            nama_komentator: currentUser.displayName || "Pengguna",
+            email_komentator: currentUser.email || "",
+            tanggal_kunjungan: new Date().toLocaleDateString("id-ID", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            }),
+            timestamp: firebase.database.ServerValue.TIMESTAMP,
+            komentar: reviewComment,
+            judul: reviewTitle || "Ulasan",
+            rating_toko: {
+              desain_interior: ratings.interior,
+              kerapihan: ratings.cleanliness,
+              kualitas_pelayanan: ratings.service,
+              kenyamanan: ratings.comfort,
+            },
+          };
+
+          const umkmId = getUmkmIdFromUrl();
+          const warungNumber = umkmId.match(/\d+/)?.[0] || "1";
+          const reviewsPath = `menu_umkm/komentar_umkm/warung${warungNumber}_komentar_umkm`;
+
+          const newReviewRef = await database.ref(reviewsPath).push(newReview);
+
+          console.log("Review berhasil disimpan dengan ID:", newReviewRef.key);
+          alert("Ulasan berhasil dikirim! Terima kasih.");
+
+          loadUmkmData(umkmId);
+          document.querySelector(".comment-modal.active").remove();
+        } catch (error) {
+          console.error("Error submitting review:", error);
+          alert(error.message || "Gagal mengirim ulasan. Silakan coba lagi.");
+        } finally {
+          submitBtn.innerHTML = "Kirim Ulasan";
+          submitBtn.disabled = false;
+        }
+      }
+
+      // Fungsi helper untuk mendapatkan rating
+      function getSelectedRatingFromInput(ratingId) {
+        const container = document.getElementById(ratingId);
+        const stars = container.querySelectorAll("i");
+        let rating = 0;
+
+        stars.forEach((star, index) => {
+          if (star.classList.contains("fas")) {
+            rating = index + 1;
+          }
+        });
+
+        return rating;
+      }
+
+      function getSelectedRatingFromInput(ratingId) {
+        const stars = document.querySelectorAll(`#${ratingId} i`);
+        let rating = 0;
+
+        stars.forEach((star) => {
+          if (star.classList.contains("fas")) {
+            rating = parseInt(star.getAttribute("data-rating"));
+          }
+        });
+
+        return rating;
+      }
+
+      // Share UMKM
+      function shareUMKM() {
+        if (navigator.share) {
+          navigator
+            .share({
+              title: currentUmkm.nama_toko || "UMKM di Sasarasa Banua",
+              text: `Lihat ${currentUmkm.nama_toko} di Sasarasa Banua`,
+              url: window.location.href,
+            })
+            .catch((err) => {
+              console.error("Error sharing:", err);
+              fallbackShare();
+            });
+        } else {
+          fallbackShare();
+        }
+      }
+
+      function fallbackShare() {
+        const shareUrl = window.location.href;
+        const shareText = `Lihat ${currentUmkm.nama_toko} di Sasarasa Banua: ${shareUrl}`;
+
+        window.open(
+          `whatsapp://send?text=${encodeURIComponent(shareText)}`,
+          "_blank"
+        );
+
+        navigator.clipboard
+          .writeText(shareText)
+          .then(() => {
+            alert("Link telah disalin ke clipboard!");
+          })
+          .catch((err) => {
+            console.error("Could not copy text: ", err);
+            prompt("Salin link berikut:", shareUrl);
+          });
+      }
+    </script>
+  </body>
+</html>
