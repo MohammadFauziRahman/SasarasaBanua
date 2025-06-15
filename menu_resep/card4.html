@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kue Bingka | Berbagi Resep | Sasarasa Banua</title>
+    <link
+      rel="shortcut icon"
+      href="img/logo_SasarasaBanua.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #1e11d1;
+        --secondary-color: #9b8357;
+        --dark-color: #2f3542;
+        --light-color: #f1f2f6;
+        --accent-color: #ff7f50;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background-color: #f9f9f9;
+        color: var(--dark-color);
+      }
+
+      /* Navbar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 5%;
+        background-color: white;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo {
+        width: 40px;
+        height: 40px;
+      }
+
+      .logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .logo-text {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--dark-color);
+        background: linear-gradient(
+          to right,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--dark-color);
+        font-weight: 500;
+        position: relative;
+        padding: 0.5rem 0;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary-color);
+      }
+
+      .nav-links a.active {
+        color: var(--primary-color);
+      }
+
+      .nav-links a.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(
+          to right,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+      }
+
+      .tonggel {
+        display: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+      }
+
+      .breadcrumb {
+        padding: 1rem 10%;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      .breadcrumb a {
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      .breadcrumb span {
+        color: #666;
+      }
+
+      .resep-detail-header {
+        padding: 3rem 10% 2rem;
+        text-align: center;
+      }
+
+      .resep-detail-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--dark-color);
+      }
+
+      .resep-meta {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+      }
+
+      .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #666;
+      }
+
+      .resep-rating {
+        color: #ffc107;
+        font-weight: 500;
+      }
+
+      .resep-author {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .author-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .author-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .author-info {
+        text-align: left;
+      }
+
+      .author-name {
+        font-weight: 600;
+      }
+
+      .post-date {
+        font-size: 0.8rem;
+        color: #666;
+      }
+
+      .resep-content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 10% 3rem;
+        gap: 3rem;
+      }
+
+      .resep-main {
+        flex: 2;
+        min-width: 300px;
+      }
+
+      .resep-sidebar {
+        flex: 1;
+        min-width: 250px;
+      }
+
+      .resep-hero {
+        width: 100%;
+        height: 400px;
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 2rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .resep-hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .video-container {
+        margin: 2rem 0;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%; 
+        height: 0;
+        overflow: hidden;
+      }
+
+      .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .resep-description {
+        margin-bottom: 2rem;
+        line-height: 1.8;
+        color: #444;
+        text-align: justify;
+      }
+
+      .ingredients-section,
+      .steps-section {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 15px;
+        margin-bottom: 2rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+
+      .section-title i {
+        color: var(--secondary-color);
+      }
+
+      .ingredient-list {
+        list-style-type: none;
+      }
+
+      .ingredient-item {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 0;
+        border-bottom: 1px dashed #eee;
+      }
+
+      .ingredient-item:last-child {
+        border-bottom: none;
+      }
+
+      .ingredient-checkbox {
+        margin-right: 1rem;
+        accent-color: var(--secondary-color);
+      }
+
+      .step-list {
+        list-style-type: none;
+        counter-reset: step-counter;
+      }
+
+      .step-item {
+        position: relative;
+        padding-left: 3rem;
+        margin-bottom: 1.5rem;
+        counter-increment: step-counter;
+      }
+
+      .step-item:before {
+        content: counter(step-counter);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2rem;
+        height: 2rem;
+        background: linear-gradient(
+          to right,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+
+      .step-image {
+        margin: 1rem 0;
+        border-radius: 10px;
+        overflow: hidden;
+        max-height: 300px;
+      }
+
+      .step-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .nutrition-card {
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 15px;
+        margin-bottom: 2rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .nutrition-title {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+      }
+
+      .nutrition-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+
+      .nutrition-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .nutrition-item:last-child {
+        border-bottom: none;
+      }
+
+      .nutrition-label {
+        font-weight: 500;
+      }
+
+      .nutrition-value {
+        color: var(--secondary-color);
+        font-weight: 600;
+      }
+
+      .tips-section {
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 15px;
+        margin-bottom: 2rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        border-left: 4px solid var(--accent-color);
+      }
+
+      .tips-title {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color: var(--accent-color);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .tips-list {
+        list-style-type: none;
+      }
+
+      .tips-item {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 0.8rem;
+      }
+
+      .tips-item:before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--accent-color);
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+
+      .related-recipes {
+        margin-top: 2rem;
+      }
+
+      .related-title {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+        color: var(--dark-color);
+        position: relative;
+        padding-bottom: 0.5rem;
+      }
+
+      .related-title:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: linear-gradient(
+          to right,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+      }
+
+      .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .related-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .related-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .related-image {
+        height: 120px;
+        overflow: hidden;
+      }
+
+      .related-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .related-card:hover .related-image img {
+        transform: scale(1.1);
+      }
+
+      .related-content {
+        padding: 1rem;
+      }
+
+      .related-name {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+      }
+
+      .related-meta {
+        font-size: 0.8rem;
+        color: #666;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: linear-gradient(
+          to right,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        color: white;
+        padding: 0.7rem 1.5rem;
+        border-radius: 30px;
+        text-decoration: none;
+        margin: 2rem 0;
+        transition: all 0.3s ease;
+      }
+
+      .back-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 3rem 10%;
+        text-align: center;
+      }
+
+      .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .footer-logo .logo {
+        width: 40px;
+        height: 40px;
+      }
+
+      .footer-logo .logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .footer-logo-text {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: white;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .footer-links a {
+        color: #ddd;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: white;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+      }
+
+      .social-icon:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(-3px);
+      }
+
+      .footer-copyright {
+        margin-top: 2rem;
+        color: #aaa;
+        font-size: 0.9rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 1200px) {
+        .nutrition-title {
+          font-size: 17px;
+        }
+
+        .nutrition-label {
+          font-size: 10px;
+        }
+
+        .nutrition-value {
+          font-size: 10px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .nav-links {
+          position: fixed;
+          top: -100%;
+          left: 0;
+          width: 100%;
+          height: 60%;
+          background-color: white;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 2rem 1rem;
+          gap: 1.5rem;
+          transition: top 0.5s ease-in-out;
+          box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+          z-index: 999;
+        }
+
+        .nav-links.active {
+          top: 72px;
+        }
+
+        .tonggel {
+          display: block;
+        }
+
+        .resep-hero {
+          height: 300px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .breadcrumb,
+        .resep-detail-header,
+        .resep-content {
+          padding: 1rem 5%;
+        }
+
+        .resep-detail-header h1 {
+          font-size: 2rem;
+        }
+
+        .video-container {
+          margin: 1rem 0;
+        }
+
+        .ingredients-section,
+        .steps-section {
+          padding: 1.5rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .resep-hero {
+          height: 200px;
+        }
+
+        .nutrition-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .related-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .nutrition-title {
+          font-size: 20px;
+        }
+
+        .nutrition-label {
+          font-size: 15px;
+        }
+
+        .nutrition-value {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="img/logo_SasarasaBanua.png" alt="Logo Sasarasa Banua" />
+        </div>
+        <div class="logo-text">Sasarasa Banua</div>
+      </div>
+
+      <div class="nav-links">
+        <a href="../home.html">Beranda</a>
+        <a href="../menu_umkm/umkm.html">UMKM</a>
+        <a href="resep.html" class="active">Resep</a>
+        <a href="../menu_event/blog.html">Blog & Event</a>
+        <a href="../menu_quiz/quiz.html">Quiz</a>
+      </div>
+
+      <div class="tonggel">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <!-- Resep Detail Header -->
+    <div class="resep-detail-header" id="resep-header">
+    </div>
+
+    <!-- Resep Content -->
+    <div class="resep-content" id="resep-container">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="logo">
+            <img src="img/logo_SasarasaBanua.png" alt="Logo Sasarasa Banua" />
+          </div>
+          <div class="footer-logo-text">Sasarasa Banua</div>
+        </div>
+
+        <div class="footer-links">
+          <a href="../home.html">Beranda</a>
+          <a href="../menu_umkm/umkm.html">UMKM</a>
+          <a href="resep.html">Resep</a>
+          <a href="../menu_event/blog.html">Blog & Event</a>
+          <a href="../menu_quiz/quiz.html">Quiz</a>
+        </div>
+
+        <div class="footer-social">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <div class="footer-copyright">
+          &copy; 2025 Sasarasa Banua. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const config = {
+        resepIndex: 3,
+      };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const tonggel = document.querySelector(".tonggel");
+        const navLinks = document.querySelector(".nav-links");
+
+        tonggel.addEventListener("click", function () {
+          navLinks.classList.toggle("active");
+          const icon = this.querySelector("i");
+          if (navLinks.classList.contains("active")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-times");
+          } else {
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
+          }
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+          link.addEventListener("click", function () {
+            navLinks.classList.remove("active");
+            const icon = tonggel.querySelector("i");
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
+          });
+        });
+
+        // Load recipe data
+        fetch("resep.json")
+          .then((response) => response.json())
+          .then((data) => {
+            const resep = data.resep_kuliner_banjarmasin[config.resepIndex];
+
+            // Update header
+            const header = document.getElementById("resep-header");
+            header.innerHTML = `
+            <h1>${resep.nama}</h1>
+            <div class="resep-meta">
+              <div class="meta-item">
+                <i class="fas fa-utensils"></i> ${resep.jenis}
+              </div>
+              <div class="meta-item"><i class="fas fa-fire"></i> Tingkat: ${resep.tingkat_sulit}</div>
+              <div class="meta-item"><i class="far fa-clock"></i> ${resep.waktu_pengerjaan}</div>
+              <div class="meta-item resep-rating">
+                <i class="fas fa-star"></i> ${resep.reting_deskripsi}
+              </div>
+            </div>
+          `;
+
+            // Update konten utama
+            const container = document.getElementById("resep-container");
+            container.innerHTML = `
+        <main class="resep-main">
+          <div class="resep-hero">
+            <img src="${resep.gambar}" alt="${resep.nama}" />
+          </div>
+
+          <div class="resep-description">
+            <p>${resep.penjelasan1}</p><br>
+            <p>${resep.penjelasan2}</p><br>
+            <p>${resep.penjelasan3}</p>
+          </div>
+
+          <div class="video-container">
+            ${
+              resep.link_video
+                ? `
+              <div class="video-wrapper">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/${getYouTubeId(
+                    resep.link_video
+                  )}"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            `
+                : `
+              <div class="video-placeholder">
+                <p>Video tutorial tidak tersedia</p>
+              </div>
+            `
+            }
+          </div>
+
+          <section class="ingredients-section">
+            <h2 class="section-title">
+              <i class="fas fa-shopping-basket"></i> Bahan-bahan
+            </h2>
+            <ul class="ingredient-list" id="resep-bahan">
+              ${resep.bahan
+                .map(
+                  (bahan, index) => `
+                <li class="ingredient-item">
+                  <input type="checkbox" id="ing${index}" class="ingredient-checkbox" />
+                  <label for="ing${index}">${bahan}</label>
+                </li>
+              `
+                )
+                .join("")}
+            </ul>
+          </section>
+
+          <section class="steps-section">
+            <h2 class="section-title">
+              <i class="fas fa-list-ol"></i> Cara Membuat
+            </h2>
+            <ol class="step-list">
+              ${resep.langkah_pembuatan
+                .map(
+                  (langkah) => `
+                <li class="step-item">
+                  <p>${langkah.deskripsi}</p>
+                </li>
+              `
+                )
+                .join("")}
+            </ol>
+          </section>
+        
+          <a href="resep.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Kembali ke Daftar Resep
+          </a>
+        </main>
+
+        <aside class="resep-sidebar">
+          <div class="nutrition-card">
+            <h3 class="nutrition-title">
+              <i class="fas fa-chart-pie"></i> Fakta Gizi (per porsi)
+            </h3>
+            <div class="nutrition-grid">
+              ${Object.entries(resep.fakta_gizi)
+                .map(
+                  ([key, value]) => `
+                <div class="nutrition-item">
+                  <span class="nutrition-label">${
+                    key.charAt(0).toUpperCase() + key.slice(1)
+                  }</span>
+                  <span class="nutrition-value">${value}</span>
+                </div>
+              `
+                )
+                .join("")}
+            </div>
+          </div>
+
+          <div class="tips-section">
+            <h3 class="tips-title">
+              <i class="fas fa-lightbulb"></i> Tips & Trik
+            </h3>
+            <ul class="tips-list">
+              ${resep.tips_dan_trik
+                .map(
+                  (tip) => `
+                <li class="tips-item">${tip}</li>
+              `
+                )
+                .join("")}
+            </ul>
+          </div>
+
+          <div class="related-recipes">
+            <h3 class="related-title">Resep Terkait</h3>
+            <div class="related-grid">
+              ${getRelatedRecipes(
+                data.resep_kuliner_banjarmasin,
+                config.resepIndex
+              )
+                .map(
+                  (related) => `
+                <div class="related-card" onclick="window.location.href='${related.src}'">
+                  <div class="related-image">
+                    <img src="${related.gambar}" alt="${related.nama}" />
+                  </div>
+                  <div class="related-content">
+                    <h4 class="related-name">${related.nama}</h4>
+                    <div class="related-meta">
+                      <span><i class="fas fa-fire"></i> ${related.tingkat_sulit}</span>
+                      <span><i class="far fa-clock"></i> ${related.waktu_pengerjaan}</span>
+                    </div>
+                  </div>
+                </div>
+              `
+                )
+                .join("")}
+            </div>
+          </div>
+        </aside>
+      `;
+          })
+          .catch((error) => {
+            console.error("Error loading the recipe data:", error);
+          });
+
+        // Fungsi untuk mendapatkan ID video YouTube dari URL yang lebih robust
+        function getYouTubeId(url) {
+          if (!url) return "";
+
+          const regExp =
+            /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+          const match = url.match(regExp);
+
+          if (url.includes("youtu.be/")) {
+            return url.split("youtu.be/")[1].split(/[?&]/)[0];
+          }
+
+          if (url.includes("embed/")) {
+            return url.split("embed/")[1].split(/[?&]/)[0];
+          }
+
+          return match && match[2].length === 11 ? match[2] : "";
+        }
+
+        // Fungsi untuk mendapatkan resep terkait (8 resep lainnya)
+        function getRelatedRecipes(recipes, currentIndex) {
+          const related = [];
+          const totalRecipes = recipes.length;
+
+          let index = currentIndex + 1;
+          let count = 0;
+
+          while (count < 8 && count < totalRecipes - 1) {
+            if (index >= totalRecipes) index = 0; 
+
+            if (index !== currentIndex) {
+              related.push(recipes[index]);
+              count++;
+            }
+
+            index++;
+          }
+
+          return related;
+        }
+      });
+
+      // Handle window resize for responsive adjustments
+      window.addEventListener("resize", function () {
+        const navLinks = document.querySelector(".nav-links");
+        const tonggelIcon = document.querySelector(".tonggel i");
+
+        if (window.innerWidth > 992 && navLinks.classList.contains("active")) {
+          navLinks.classList.remove("active");
+          tonggelIcon.classList.remove("fa-times");
+          tonggelIcon.classList.add("fa-bars");
+        }
+      });
+    </script>
+  </body>
+</html>
