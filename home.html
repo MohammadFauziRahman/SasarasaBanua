@@ -1,1 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sasarasa Banua</title>
+        <link rel="shortcut icon" href="img/logo_SasarasaBanua.png" type="image/x-icon">
+        <link rel="stylesheet" href="home.css" />
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- Bagian Navbar -->
+        <nav class="navbar">
+            <div class="logo-container">
+                <div class="logo">
+                <img src="img/logo_SasarasaBanua.png" alt="Logo Sasarasa Banua" />
+                </div>
+                <div class="logo-text">Sasarasa Banua</div>
+            </div>
+
+            <div class="nav-links">
+                <a href="#home" class="active">Beranda</a>
+                <a href="#umkm">UMKM</a>
+                <a href="#resep">Resep</a>
+                <a href="#blog">Blog & Event</a>
+                <a href="#quiz">Quiz</a>
+            </div>
+            </div>
+
+            <div class="tonggel">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+
+        <!-- Bagian beranda -->
+        <section id="home">
+            <div class="hero-content">
+                <h1 class="hero-title">Jelajahi Kelezatan Kuliner Banjarmasin</h1>
+                <p class="hero-subtitle">
+                Temukan cita rasa autentik khas Banjarmasin dalam satu platform
+                </p>
+                <a href="#umkm" class="btn-explore">Jelajahi Sekarang</a>
+            </div>
+            <div class="hero-image">
+                <img
+                src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Makanan Nusantara"
+                />
+            </div>
+        </section>
+
+        <!-- Bagian Card Menu Yang Ada Dalam Awal Website -->
+        <section class="platform-banner">
+            <h2 class="platform-title">Menu Yang Tersedia</h2>
+            <p class="platform-subtitle">
+                Satu platform untuk menjelajahi seluruh kelezatan kuliner Banjarmasin
+            </p>
+            <div class="platform-features">
+                <div class="platform-feature">
+                    <i class="fas fa-store"></i>
+                    <h3>UMKM</h3>
+                    <p>Temukan usaha kuliner lokal terbaik</p>
+                </div>
+                <div class="platform-feature">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Resep</h3>
+                    <p>Pelajari resep tradisional khas Banjar</p>
+                </div>
+                <div class="platform-feature">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Blog & Event</h3>
+                    <p>Ikuti acara kuliner dan baca artikel menarik</p>
+                </div>
+                <div class="platform-feature">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Mini Quiz</h3>
+                    <p>Bermain Quiz Seputar Makanan Khas Kota Banjarmasin</p>
+                </div>
+                <div class="platform-feature">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Kontak</h3>
+                    <p>Hubungi kami untuk informasi lebih lanjut</p>
+                </div>
+                <div class="platform-feature">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>Saran Dan Masukan Website</h3>
+                    <p>Memberikan Saran Dan Masukan Untuk Pengembang Website</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Menu UMKM Lokal -->
+        <section id="umkm" class="content-section">
+            <h2 class="section-title">UMKM Kuliner Lokal</h2>
+            <div class="content-container" id="umkm-container"></div>
+            <div class="btn-more">
+                <a href="menu_umkm/umkm.html">Lihat Versi Lengkapnya</a>
+            </div>
+        </section>
+
+        <!-- Bagian Menu Resep -->
+        <section id="resep" class="content-section">
+            <h2 class="section-title">Resep Andalan</h2>
+            <div class="content-container" id="recipe-container"></div>
+            <div class="btn-more">
+                <a href="menu_resep/resep.html">Lihat Versi Lengkapnya</a>
+            </div>
+        </section>
+        
+        <!-- Bagian Menu Blog Event Kuliner  -->
+        <section id="blog" class="content-section">
+            <h2 class="section-title">Blog & Event Kuliner</h2>
+            <div class="content-container" id="event-cards-container"></div>
+            <div class="btn-more">
+                <a href="menu_event/blog.html">Lihat Versi Lengkapnya</a>
+            </div>
+        </section>
+
+        <!-- Bagian Menu Mini Quiz Kuliner -->
+        <section id="quiz">
+            <h2 class="section-title">Quiz Kuliner Banjar</h2>
+            <div class="quiz-card-container">
+                <div class="quiz-card" id="quiz-starter">
+                <div class="quiz-card-image">
+                    <img
+                    src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                    alt="Quiz Kuliner Banjar"
+                    />
+                </div>
+                <div class="quiz-card-content">
+                    <h3 class="quiz-card-title">
+                    Uji Pengetahuan Kuliner Banjarmasin Anda
+                    </h3>
+                    <p class="quiz-card-description">
+                    Jawab pertanyaan tentang kuliner khas Banjarmasin dan lihat
+                    seberapa dalam pengetahuan Anda tentang kuliner lokal!
+                    </p>
+                    <a href="menu_quiz/quiz.html" class="quiz-start-btn" id="start-quiz">Mulai Quiz</a>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Kontak Pembuat Website -->
+        <section id="kontak">
+        <h2 class="section-title">Hubungi Kami</h2>
+        <div class="kontak-container">
+            <div class="kontak-info">
+            <div class="kontak-item">
+                <div class="kontak-icon">
+                <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="kontak-text">
+                <h3>Alamat</h3>
+                <p>
+                    Jl. Kuliner Banjar No. 123<br />Banjarmasin, Kalimantan Selatan
+                </p>
+                </div>
+            </div>
+
+            <div class="kontak-item">
+                <div class="kontak-icon">
+                <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="kontak-text">
+                <h3>Telepon</h3>
+                <p>+62 812 3456 7890<br />Senin - Jumat, 09:00 - 17:00</p>
+                </div>
+            </div>
+
+            <div class="kontak-item">
+                <div class="kontak-icon">
+                <i class="fas fa-envelope"></i>
+                </div>
+                <div class="kontak-text">
+                <h3>Email</h3>
+                <p>info@sasarasabanua.com<br />support@sasarasabanua.com</p>
+                </div>
+            </div>
+
+            <div class="kontak-item">
+                <div class="kontak-icon">
+                <i class="fas fa-clock"></i>
+                </div>
+                <div class="kontak-text">
+                <h3>Jam Operasional</h3>
+                <p>Setiap Hari<br />08:00 - 22:00</p>
+                </div>
+            </div>
+            </div>
+
+            <div class="kontak-form">
+            <form id="contact-form">
+                <div class="form-group">
+                <h3>From Saran</h3>
+                <label for="name" class="form-label">Nama Lengkap</label>
+                <input type="text" id="name" class="form-control" required />
+                </div>
+                <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="form-control" required />
+                </div>
+                <div class="form-group">
+                <label for="subject" class="form-label">Subjek</label>
+                <input type="text" id="subject" class="form-control" required />
+                </div>
+                <div class="form-group">
+                <label for="message" class="form-label">Pesan</label>
+                <textarea id="message" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Kirim Pesan</button>
+            </form>
+            </div>
+        </div>
+        </section>
+
+        <!-- Bagian Footer -->
+        <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+            <div class="logo">
+                <img src="img/logo_SasarasaBanua.png" alt="Logo Sasarasa Banua" />
+            </div>
+            <div class="footer-logo-text">Sasarasa Banua</div>
+            </div>
+            <div class="footer-links">
+            <a href="#home">Beranda</a>
+            <a href="#umkm">UMKM</a>
+            <a href="#resep">Resep</a>
+            <a href="#blog">Blog & Event</a>
+            <a href="#quiz">Quiz</a>
+            </div>
+            <div class="footer-social">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="footer-copyright">
+            &copy; 2025 Sasarasa Banua. All Rights Reserved.
+            </p>
+        </div>
+        </footer>
+
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+        <script src="home.js"></script>
+    </body>
+</html>
 
