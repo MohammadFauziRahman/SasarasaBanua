@@ -1,0 +1,594 @@
+{
+  "event1": {
+    "title": "Lomba Memasak Kuliner Khas Banjar",
+    "date": {
+      "day": "24",
+      "month": "Mei",
+      "year": "2025",
+      "full_date": "24 Mei 2025",
+      "time": "08:00 - 12:00 WITA"
+    },
+    "location": {
+      "name": "Siring Menara Pandang, Banjarmasin",
+      "address": "Jl. Pierre Tendean, Banjarmasin",
+      "latitude": -3.31875,
+      "longitude": 114.59258,
+      "map_embed": "https://www.google.com/maps?q=Siring+Menara+Pandang+Banjarmasin"
+    },
+    "price": {
+      "general": "Gratis"
+    },
+    "capacity": {
+      "participants": "50 tim peserta"
+    },
+    "type": "Lomba Memasak",
+    "description": "Kompetisi memasak kuliner khas Banjar (tetel & masubah), diselenggarakan oleh Disbudpar Banjarmasin.",
+    "schedule": [
+      {
+        "time": "08:00 - 08:30",
+        "title": "Registrasi & Briefing",
+        "description": "Peserta registrasi, pembagian meja dan instruksi lomba."
+      },
+      {
+        "time": "08:30 - 10:30",
+        "title": "Babak Memasak",
+        "description": "Setiap tim memasak hidangan khas dalam waktu terbatas."
+      },
+      {
+        "time": "10:30 - 11:00",
+        "title": "Pengumpulan Hidangan",
+        "description": "Peserta menyerahkan hasil masakan ke juri."
+      },
+      {
+        "time": "11:00 - 11:45",
+        "title": "Penjurian & Tasting",
+        "description": "Juri mencicipi dan menilai berdasarkan rasa, penyajian, dan kreatifitas."
+      },
+      {
+        "time": "11:45 - 12:00",
+        "title": "Pengumuman Pemenang",
+        "description": "Pengumuman juara 1-3 dan pemberian hadiah."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Demo Singkat Chef Lokal",
+        "description": "Demo teknik memasak tetel dari Chef Tedi.",
+        "icon": "fas fa-users"
+      },
+      {
+        "title": "Panel Juri Ahli",
+        "description": "Penjurian dilakukan oleh pakar kuliner Banjar.",
+        "icon": "fas fa-users"
+      },
+      {
+        "title": "Foto Bersama Pemenang",
+        "description": "Sesi foto bersama juara lomba.",
+        "icon": "fas fa-users"
+      }
+    ],
+    "features": [
+      {
+        "title": "Booth Sponsor",
+        "description": "Tersedia booth produk kuliner dan sponsor terkait."
+      },
+      {
+        "title": "Stand Informasi Wisata Kuliner",
+        "description": "Info destinasi kuliner Banjar."
+      },
+      {
+        "title": "Area Publik Viewing",
+        "description": "Area standar bagi pengunjung menikmati acara."
+      }
+    ],
+    "gallery": [
+      {
+        "image": "img/event1/gambar1.jpg",
+        "alt": "Peserta lomba memasak di Siring"
+      },
+      {
+        "image": "img/event1/gambar2.jpg",
+        "alt": "Juri menilai hidangan Banjar"
+      },
+      {
+        "image": "img/event1/gambar3.jpg",
+        "alt": "Interaksi peserta dan chef lokal"
+      },
+      {
+        "image": "img/event1/gambar4.jpg",
+        "alt": "Foto pemenang lomba bersama juri"
+      }
+    ],
+    "src": "card1.html"
+  },
+  "event2": {
+    "title": "Living Plaza Culinary & Entertainment Festival",
+    "date": {
+      "day": "26",
+      "month": "Mei",
+      "year": "2025",
+      "full_date": "26 Mei - 9 Juni 2025",
+      "time": "17:00 - 22:00 WITA"
+    },
+    "location": {
+      "name": "Living Plaza Banjarmasin",
+      "address": "Area Living Plaza, Banjarmasin",
+      "latitude": -3.31987,
+      "longitude": 114.59075,
+      "map_embed": "https://www.google.com/maps?q=Living+Plaza+Banjarmasin"
+    },
+    "price": {
+      "general": "Gratis"
+    },
+    "capacity": {
+      "general": "Terbuka untuk 1.500 pengunjung/hari"
+    },
+    "type": "Festival Kuliner & Hiburan",
+    "description": "Festival kuliner kolaborasi tenant makanan dengan live music dan hiburan setiap malam.",
+    "schedule": [
+      {
+        "time": "17:00 - 18:00",
+        "title": "Opening Ceremony",
+        "description": "Pembukaan resmi, sambutan pengelola plaza."
+      },
+      {
+        "time": "18:00 - 20:00",
+        "title": "Live Music & Buskers",
+        "description": "Penampilan musik oleh band lokal dan street performer."
+      },
+      {
+        "time": "20:00 - 21:00",
+        "title": "Demo Masak Garing",
+        "description": "Demo memasak crispy snack andalan bagian foodcourt."
+      },
+      {
+        "time": "21:00 - 22:00",
+        "title": "Penampilan Budaya",
+        "description": "Tarian daerah Banjar sebagai hiburan utama malam itu."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Live Cooking demo",
+        "description": "Chef menampilkan masakan cepat saji lokal.",
+        "icon": "fas fa-users"
+      },
+      {
+        "title": "Band Lokal Populer",
+        "description": "Live music dari band-band daerah.",
+        "icon": "fas fa-users"
+      },
+      {
+        "title": "Hiburan Budaya",
+        "description": "Tarian tradisional setiap weekend.",
+        "icon": "fas fa-users"
+      }
+    ],
+    "features": [
+      {
+        "title": "Zona Kuliner Bertema",
+        "description": "Area terpusat tenant makanan beragam."
+      },
+      {
+        "title": "Kids Corner",
+        "description": "Tempat bermain anak dan pertunjukan boneka."
+      },
+      {
+        "title": "Photo Spot Digital",
+        "description": "Spot foto instagramable untuk pengunjung."
+      }
+    ],
+    "gallery": [
+      {
+        "image": "img/event2/gambar1.jpg",
+        "alt": "Panggung live music malam hari"
+      },
+      {
+        "image": "img/event2/gambar2.jpg",
+        "alt": "Suasana tenant kuliner ramai"
+      },
+      {
+        "image": "img/event2/gambar3.jpg",
+        "alt": "Demo memasak pengunjung antusias"
+      },
+      {
+        "image": "img/event2/gambar4.jpg",
+        "alt": "Area Kids Corner penuh pengunjung"
+      }
+    ],
+    "src": "card2.html"
+  },
+  "event3": {
+    "title": "Noodlepreneur Workshop Belajar Memasak aneka mie",
+    "date": {
+      "day": "14",
+      "month": "April",
+      "year": "2025",
+      "full_date": "14 April 2025",
+      "time": "09:00 - 12:00 WITA"
+    },
+    "location": {
+      "name": "Kelurahan Basirih Selatan",
+      "address": "Kel. Basirih Selatan, Banjarmasin",
+      "latitude": -3.35395611,
+      "longitude": 114.58155,
+      "map_embed": "https://www.google.com/maps?q=Basirih+Selatan+Banjarmasin"
+    },
+    "price": {
+      "general": "Gratis"
+    },
+    "capacity": {
+      "participants": "30 orang"
+    },
+    "type": "Workshop",
+    "description": "Pelatihan membuat aneka mie & strategi pemasaran untuk UMKM rumahan.",
+    "schedule": [
+      {
+        "time": "09:00 - 09:30",
+        "title": "Registrasi & Pembukaan",
+        "description": "Kenalan dengan instruktur dan peserta."
+      },
+      {
+        "time": "09:30 - 10:30",
+        "title": "Demo Pembuatan Mie",
+        "description": "Instruktur menunjukkan teknik dasar membuat mie segar."
+      },
+      {
+        "time": "10:30 - 11:15",
+        "title": "Praktik Mandiri",
+        "description": "Peserta mencoba membuat mie secara langsung."
+      },
+      {
+        "time": "11:15 - 12:00",
+        "title": "Strategi Pemasaran",
+        "description": "Diskusi singkat soal branding dan jualan online."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Demo Langsung",
+        "description": "Instruktur memperlihatkan cara bikin mie.",
+        "icon": "fas fa-users"
+      },
+      {
+        "title": "Hands-On Session",
+        "description": "Peserta langsung praktek membuat produk.",
+        "icon": "fas fa-users"
+      },
+      {
+        "title": "Tips UMKM",
+        "description": "Pembahasan cara menjual & branding.",
+        "icon": "fas fa-users"
+      }
+    ],
+    "features": [
+      {
+        "title": "Sertifikat & Materi",
+        "description": "Setiap peserta menerima sertifikat."
+      },
+      {
+        "title": "Stand Bahan Baku",
+        "description": "Stand penyedia tepung & bahan lokal."
+      },
+      {
+        "title": "Networking Area",
+        "description": "Tempat berkumpul dan berdiskusi antar peserta."
+      }
+    ],
+    "gallery": [
+      {
+        "image": "img/event3/gambar1.jpg",
+        "alt": "Instruktur menjelaskan teknik mie"
+      },
+      {
+        "image": "img/event3/gambar2.jpg",
+        "alt": "Peserta praktek membuat mie"
+      },
+      {
+        "image": "img/event3/gambar3.jpg",
+        "alt": "Sesi diskusi pemasaran UMKM"
+      },
+      {
+        "image": "img/event3/gambar4.jpg",
+        "alt": "Foto bersama peserta dan instruktur"
+      }
+    ],
+    "src": "card3.html"
+  },
+  "event4": {
+    "title": "Festival Roti Tradisional Banjarmasin",
+    "date": {
+      "day": "5",
+      "month": "Juni",
+      "year": "2025",
+      "full_date": "5 Juni 2025",
+      "time": "10:00 - 17:00 WITA"
+    },
+    "location": {
+      "name": "Taman Budaya Banjarmasin",
+      "address": "Jl. S. Parman, Banjarmasin",
+      "latitude": -3.31987,
+      "longitude": 114.59075,
+      "map_embed": "https://www.google.com/maps?q=Taman+Budaya+Banjarmasin"
+    },
+    "price": {
+      "general": "Rp 10.000/orang"
+    },
+    "capacity": {
+      "general": "500 pengunjung"
+    },
+    "type": "Festival Kuliner",
+    "description": "Pameran dan penjualan berbagai roti tradisional khas Banjarmasin.",
+    "schedule": [
+      {
+        "time": "10:00 - 11:00",
+        "title": "Pembukaan & Sambutan",
+        "description": "Resmi dibuka oleh kepala dinas pariwisata."
+      },
+      {
+        "time": "11:00 - 14:00",
+        "title": "Pameran & Jualan Roti",
+        "description": "Stand roti tradisional dari berbagai UMKM."
+      },
+      {
+        "time": "14:00 - 15:30",
+        "title": "Workshop Roti",
+        "description": "Belajar membuat roti khas Banjar."
+      },
+      {
+        "time": "15:30 - 17:00",
+        "title": "Live Music & Penutupan",
+        "description": "Hiburan musik sampai acara selesai."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Demo Pembuatan Roti",
+        "description": "Tunjukkan cara membuat roti legit khas Banjar.",
+        "icon": "fas fa-users"
+      },
+      {
+        "title": "Penjualan Langsung",
+        "description": "Pembelian roti khas di stand-stand UMKM.",
+        "icon": "fas fa-users"
+      },
+      {
+        "title": "Hiburan Musik",
+        "description": "Live music dari musisi lokal sepanjang acara.",
+        "icon": "fas fa-users"
+      }
+    ],
+    "features": [
+      {
+        "title": "Stand UMKM",
+        "description": "Stand kuliner roti tradisional dan oleh-oleh."
+      },
+      {
+        "title": "Area Santai",
+        "description": "Tempat duduk dan santai untuk pengunjung."
+      },
+      {
+        "title": "Spot Foto Tema Roti",
+        "description": "Area foto dengan dekorasi roti besar."
+      }
+    ],
+    "gallery": [
+      {
+        "image": "img/event4/gambar1.jpg",
+        "alt": "Stand roti tradisional ramai pengunjung"
+      },
+      {
+        "image": "img/event4/gambar2.jpg",
+        "alt": "Demo pembuatan roti legit Banjar"
+      },
+      {
+        "image": "img/event4/gambar3.jpg",
+        "alt": "Pengunjung membeli roti"
+      },
+      {
+        "image": "img/event4/gambar4.jpg",
+        "alt": "Penampilan musik pengiring festival"
+      }
+    ],
+    "src": "card4.html"
+  },
+  "event5": {
+    "title": "Pasar Kuliner Ramadhan",
+    "date": {
+      "day": "12",
+      "month": "April",
+      "year": "2025",
+      "full_date": "12 April - 12 Mei 2025",
+      "time": "16:00 - 22:00 WITA"
+    },
+    "location": {
+      "name": "Halaman Masjid Raya Sabilal Muhtadin",
+      "address": "Jl. A. Yani Km. 3,5 Banjarmasin",
+      "latitude": -3.31896,
+      "longitude": 114.59127,
+      "map_embed": "https://www.google.com/maps?q=Masjid+Raya+Sabilal+Muhtadin+Banjarmasin"
+    },
+    "price": {
+      "general": "Gratis masuk"
+    },
+    "capacity": {
+      "general": "2000 pengunjung/hari"
+    },
+    "type": "Pasar Kuliner",
+    "description": "Pasar kuliner Ramadhan dengan aneka makanan buka puasa dan jajanan khas Banjar.",
+    "schedule": [
+      {
+        "time": "16:00 - 18:00",
+        "title": "Pembukaan Pasar",
+        "description": "Pasar buka, pengunjung mulai berdatangan."
+      },
+      {
+        "time": "18:00 - 19:00",
+        "title": "Buka Puasa Bersama",
+        "description": "Area khusus buka puasa dengan menu lengkap."
+      },
+      {
+        "time": "19:00 - 21:00",
+        "title": "Pertunjukan Musik Islami",
+        "description": "Hiburan musik religi selama pasar buka."
+      },
+      {
+        "time": "21:00 - 22:00",
+        "title": "Penutupan Pasar",
+        "description": "Penutupan dan bersih-bersih area pasar."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Menu Buka Puasa Khas",
+        "description": "Beragam makanan dan minuman khas Ramadhan.",
+        "icon": "fas fa-users"
+      },
+      {
+        "title": "Suasana Ramadhan",
+        "description": "Dekorasi dan ornamen khas Ramadhan.",
+        "icon": "fas fa-users"
+      },
+      {
+        "title": "Pertunjukan Musik Islami",
+        "description": "Live musik religi tiap malam.",
+        "icon": "fas fa-users"
+      }
+    ],
+    "features": [
+      {
+        "title": "Area Parkir Luas",
+        "description": "Parkir kendaraan yang memadai."
+      },
+      {
+        "title": "Tempat Ibadah",
+        "description": "Fasilitas musholla di area pasar."
+      },
+      {
+        "title": "Toilet Umum",
+        "description": "Toilet bersih dan tersedia di lokasi."
+      }
+    ],
+    "gallery": [
+      {
+        "image": "img/event5/gambar1.jpg",
+        "alt": "Suasana pasar kuliner sore hari"
+      },
+      {
+        "image": "img/event5/gambar2.jpg",
+        "alt": "Pengunjung menikmati makanan buka puasa"
+      },
+      {
+        "image": "img/event5/gambar3.jpg",
+        "alt": "Penampilan musik islami"
+      },
+      {
+        "image": "img/event5/gambar4.jpg",
+        "alt": "Stand jajanan khas Ramadhan"
+      }
+    ],
+    "src": "card5.html"
+  },
+  "event6": {
+    "title": "Festival Kopi Nusantara",
+    "date": {
+      "day": "20",
+      "month": "Juni",
+      "year": "2025",
+      "full_date": "20 - 22 Juni 2025",
+      "time": "09:00 - 21:00 WITA"
+    },
+    "location": {
+      "name": "Taman Kamboja Banjarmasin",
+      "address": "Jl. Pangeran Antasari, Banjarmasin",
+      "latitude": -3.33269,
+      "longitude": 114.6145,
+      "map_embed": "https://www.google.com/maps?q=Taman+Kamboja+Banjarmasin"
+    },
+    "price": {
+      "general": "Rp 15.000/orang"
+    },
+    "capacity": {
+      "general": "1000 pengunjung/hari"
+    },
+    "type": "Festival Kopi",
+    "description": "Festival kopi nusantara, mengenalkan berbagai jenis kopi dari berbagai daerah di Indonesia.",
+    "schedule": [
+      {
+        "time": "09:00 - 10:00",
+        "title": "Pembukaan Festival",
+        "description": "Sambutan dari panitia dan dinas pariwisata."
+      },
+      {
+        "time": "10:00 - 13:00",
+        "title": "Workshop Barista",
+        "description": "Pelatihan pembuatan kopi oleh barista profesional."
+      },
+      {
+        "time": "13:00 - 15:00",
+        "title": "Coffee Tasting",
+        "description": "Sesi mencicipi berbagai jenis kopi nusantara."
+      },
+      {
+        "time": "15:00 - 18:00",
+        "title": "Pameran Produk Kopi",
+        "description": "Stand kopi dari berbagai daerah di Indonesia."
+      },
+      {
+        "time": "18:00 - 21:00",
+        "title": "Live Music & Penutupan",
+        "description": "Hiburan musik sampai akhir acara."
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Workshop Barista",
+        "description": "Belajar teknik pembuatan kopi dari ahlinya.",
+        "icon": "fas fa-users"
+      },
+      {
+        "title": "Coffee Tasting",
+        "description": "Mencicipi kopi dari berbagai daerah Indonesia.",
+        "icon": "fas fa-users"
+      },
+      {
+        "title": "Live Music",
+        "description": "Hiburan musik sepanjang festival.",
+        "icon": "fas fa-users"
+      }
+    ],
+    "features": [
+      {
+        "title": "Zona Kopi Spesial",
+        "description": "Stand kopi specialty dan alat kopi."
+      },
+      {
+        "title": "Area Duduk Nyaman",
+        "description": "Tempat duduk indoor dan outdoor."
+      },
+      {
+        "title": "Wi-Fi Gratis",
+        "description": "Internet gratis untuk pengunjung."
+      }
+    ],
+    "gallery": [
+      {
+        "image": "img/event6/gambar1.jpg",
+        "alt": "Stand kopi nusantara"
+      },
+      {
+        "image": "img/event6/gambar2.jpg",
+        "alt": "Workshop barista berlangsung"
+      },
+      {
+        "image": "img/event6/gambar3.jpg",
+        "alt": "Pengunjung mencoba kopi"
+      },
+      {
+        "image": "img/event6/gambar4.jpg",
+        "alt": "Penampilan musik penutupan"
+      }
+    ],
+    "src": "card6.html"
+  }
+}

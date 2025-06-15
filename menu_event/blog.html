@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Kuliner | Sasarasa Banua</title>
+    <link rel="shortcut icon" href="img/logo_SasarasaBanua.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="blog.css" />
+  </head>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="img/logo_SasarasaBanua.png" alt="Logo Sasarasa Banua" />
+        </div>
+        <div class="logo-text">Sasarasa Banua</div>
+      </div>
+
+      <div class="nav-links">
+        <a href="../home.html">Beranda</a>
+        <a href="../menu_umkm/umkm.html">UMKM</a>
+        <a href="../menu_resep/resep.html">Resep</a>
+        <a href="blog.html" class="active">Blog & Event</a>
+        <a href="../menu_quiz/quiz.html">Quiz</a>
+      </div>
+
+      <div class="tonggel">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <!-- Header Event -->
+    <section class="event-header">
+      <h1>Event Kuliner Khas Banjarmasin</h1>
+      <p>
+        Temukan berbagai event kuliner menarik di Banjarmasin. Dari festival
+        makanan tradisional hingga workshop memasak, jangan lewatkan kesempatan
+        untuk merasakan kekayaan kuliner Kalimantan Selatan!
+      </p>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Cari event..." />
+      </div>
+
+      <div class="filter-group">
+        <label for="category" class="filter-label">Kategori:</label>
+        <select id="category" class="filter-select">
+            <option value="all">Semua Kategori</option>
+            <option value="festival">Festival</option>
+            <option value="lomba">Lomba</option>
+            <option value="workshop">Workshop</option>
+            <option value="market">Pasar</option>
+        </select>
+    </div>
+
+
+      <div class="filter-group">
+        <label for="month" class="filter-label">Bulan:</label>
+        <select id="month" class="filter-select">
+          <option value="all">Semua Bulan</option>
+          <option value="Januari">Januari</option>
+          <option value="Februari">Februari</option>
+          <option value="Maret">Maret</option>
+          <option value="April">April</option>
+          <option value="Mei">Mei</option>
+          <option value="Juni">Juni</option>
+          <option value="Juli">Juli</option>
+          <option value="Agustus">Agustus</option>
+          <option value="September">September</option>
+          <option value="Oktober">Oktober</option>
+          <option value="November">November</option>
+          <option value="Desember">Desember</option>
+        </select>
+      </div>
+
+      <button class="calendar-btn" id="showCalendarBtn">
+        <i class="far fa-calendar-alt"></i>
+        Lihat Kalender
+      </button>
+    </section>
+
+    <!-- Calendar Popup -->
+    <div class="calendar-popup" id="calendarPopup">
+      <div class="calendar-container">
+        <span class="close-calendar" id="closeCalendar">&times;</span>
+        <h2 class="calendar-title">Kalender Event 2023</h2>
+        <div class="calendar-controls">
+          <div class="calendar-nav">
+            <button class="calendar-nav-btn" id="prevMonth">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="calendar-nav-btn" id="nextMonth">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <div class="calendar-month" id="currentMonth">November 2023</div>
+        </div>
+        <table class="event-calendar" id="eventCalendar">
+          <thead>
+            <tr>
+              <th>Minggu</th>
+              <th>Senin</th>
+              <th>Selasa</th>
+              <th>Rabu</th>
+              <th>Kamis</th>
+              <th>Jumat</th>
+              <th>Sabtu</th>
+            </tr>
+          </thead>
+          <tbody id="calendarBody">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- event card -->
+    <div class="event-container">
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="logo">
+            <img src="img/logo_SasarasaBanua.png" alt="Logo Sasarasa Banua" />
+          </div>
+          <div class="footer-logo-text">Sasarasa Banua</div>
+        </div>
+        <div class="footer-links">
+        <a href="../home.html">Beranda</a>
+        <a href="../menu_umkm/umkm.html">UMKM</a>
+        <a href="../menu_resep/resep.html">Resep</a>
+        <a href="blog.html">Blog & Event</a>
+        <a href="../menu_quiz/quiz.html">Quiz</a>
+        </div>
+        <div class="footer-social">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="footer-copyright">
+          &copy; 2025 Sasarasa Banua. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="blog.js"></script>
+  </body>
+</html>
